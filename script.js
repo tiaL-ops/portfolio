@@ -13,7 +13,7 @@ item2.addEventListener("click", () => {
 });
 
 
-// Add a click event listener to item4
+
 item4.addEventListener("click", () => {
   console.log("item4 clicked");
 
@@ -24,4 +24,46 @@ item4.addEventListener("click", () => {
     console.log("Expanding item4, shrinking others");
     grid.classList.add("big"); 
   }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const item2 = document.getElementById("item2");
+
+    if (item2) { 
+        // Create the overlay element
+        const overlay = document.createElement("div");
+        overlay.classList.add("hover-overlay");
+        overlay.textContent = "Hovered Text";
+
+        // Style the overlay
+        Object.assign(overlay.style, {
+            position: "absolute",       
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)", 
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            opacity: "0",             
+            transition: "opacity 0.3s ease",
+            pointerEvents: "none"    
+        });
+
+      
+        item2.style.position = "relative";
+        item2.appendChild(overlay);
+
+        // Add hover effect
+        item2.addEventListener("mouseenter", () => {
+            overlay.style.opacity = "1"; 
+        });
+
+        item2.addEventListener("mouseleave", () => {
+            overlay.style.opacity = "0"; 
+        });
+    }
 });

@@ -12,7 +12,7 @@ body {
     height: 100%;
     display: grid;
     gap: 20px;
-    background-color: #2196F3;
+    background-color: #1d2328;
     padding: 40px;
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(3, auto); 
@@ -64,10 +64,11 @@ body {
     grid-row: 2;
     align-self: center;
     justify-self: center;
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 500px;
     font-size: 16px;
     padding: 10px;
+    border-radius: 20%;
 }
 
 #myGrid.visible #item1,
@@ -87,6 +88,22 @@ body {
     padding: 20px 0;
 }
 
+/* Overlay and Text initially hidden */
+#item2 .hover-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
 #myGrid.big #item4 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 5;
