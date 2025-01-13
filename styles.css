@@ -11,12 +11,11 @@ body {
     width: 100%;
     height: 100%;
     display: grid;
-    gap: 10px;
+    gap: 20px;
     background-color: #2196F3;
-    padding: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    transition: all 0.5s ease;
+    padding: 40px;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, auto); 
 }
 
 #myGrid div {
@@ -24,7 +23,7 @@ body {
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
-    transition: all 0.5s ease;
+
 }
 
 .item1 {
@@ -103,3 +102,51 @@ body {
     padding: 10px;
 }
 
+.item1, .item3, .item5, .item6 {
+    background-color: transparent;
+    width: 100%;
+    height: 50%;
+    perspective: 1000px; 
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.item1:hover .flip-card-inner,
+.item3:hover .flip-card-inner,
+.item5:hover .flip-card-inner,
+.item6:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; /* Hides the back when not flipped */
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
