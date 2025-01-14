@@ -4,91 +4,140 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landy Portfolio</title>
- 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
- 
+
+  <style>
+    body {
+      font-family: "Sour Gummy", serif;
+      background-color: #FDF6F0; 
+      color: #333;
+    }
+
+    h2 {
+      font-family: "Sour Gummy", serif;
+      font-weight: 700;
+      color: #FF6B6B;
+    }
+
+    .sour-gummy-bold {
+      font-family: "Sour Gummy", serif;
+      font-weight: 700;
+      color: #6B5B95; 
+    }
+
+    .sour-gummy {
+      font-family: "Sour Gummy", serif;
+      font-weight: 400;
+      color: #008080;
+    }
+
+    .sour-gummy-italic {
+      font-family: "Sour Gummy", serif;
+      font-weight: 400;
+      font-style: italic;
+      color: #FFB347; 
+    }
+
+    a {
+      color: #3498DB; 
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    strong {
+      color: #D72638; 
+    }
+
+    .flip-card-front img {
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
   <div id="myGrid">
     <!-- Technical Skills -->
-    <div id="item1" class="item1"> 
-      <h2 class="text-lg font-bold mb-4 flex items-center"> 
-        <i class="fas fa-tools mr-2"></i> Skills
-      </h2>
+    <div id="item1" class="item1">
+      <h2 class="text-lg sour-gummy font-bold mb-4">Skills</h2>
       <ul class="space-y-3">
-        <li class="flex items-center">
-          <i class="fas fa-code mr-3"></i>
-          <p><strong>Languages:</strong> Python, Java, JavaScript</p>
+        <li>
+          <strong class="sour-gummy-bold">Languages:</strong>
+          <p class="sour-gummy">Python, Java, JavaScript</p>
         </li>
-        <li class="flex items-center">
-          <i class="fas fa-layer-group mr-3"></i>
-          <p><strong>Frameworks:</strong> React, Flask, Phaser</p>
+        <li>
+          <strong class="sour-gummy-bold">Frameworks:</strong>
+          <p class="sour-gummy-italic">React, Flask, Phaser</p>
         </li>
-        <li class="flex items-center">
-          <i class="fas fa-wrench mr-3"></i>
-          <p><strong>Tools:</strong> Git, Docker, SQL</p>
+        <li>
+          <strong class="sour-gummy-bold">Tools:</strong>
+          <p class="sour-gummy">Git, Docker, SQL</p>
         </li>
       </ul>
     </div>
 
     <!-- Technical Projects -->
     <div id="item2" class="item2">
-      <div class="scroll-container">
-        <ul class="space-y-6">
-          <li>
-            <a href="#" onclick="showProject('karoka')" class="text-base font-medium">Karoka</a>
-            <div id="karoka" class="project-detail hidden mt-3 p-4 rounded-md">
-              <p>A 2D game teaching coding through play.</p>
-              <img src="assets/Thumb_Beta.png" alt="Karoka project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
-              <p class="text-center mt-3">
-                <a href="https://karoka.co" target="_blank">View on GitHub</a>
-              </p>
-            </div>
-          </li>
-          <li>
-            <a href="#" onclick="showProject('ai-companion')" class="text-base font-medium">AI Companion</a>
-            <div id="ai-companion" class="project-detail hidden mt-3 p-4 rounded-md">
-              <p>An AI app for relationship guidance.</p>
-              <img src="assets/ai.png" alt="AI Companion project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
-              <p class="text-center mt-3">
-                <a href="https://github.com/tiaL-ops/magicBall.git" target="_blank">View on GitHub</a>
-              </p>
-            </div>
-          </li>
-          <li>
-            <a href="#" onclick="showProject('my75hard')" class="text-base font-medium">My75 Hard</a>
-            <div id="my75hard" class="project-detail hidden mt-3 p-4 rounded-md">
-              <p>A fitness tracker for goals, water, and reading.</p>
-              <img src="assets/Simulator Screenshot - iPhone 16 Pro - 2025-01-02 at 22.58.40.png" alt="My75 Hard project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
-              <p class="text-center mt-3">
-                <a href="https://github.com/tiaL-ops/my75.git" target="_blank">View on GitHub</a>
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-    <!-- Project Management Skills -->
-    <div id="item3" class="item3">
-      <h2 class="text-lg font-bold mb-4">Leadership</h2>
-      <ul class="space-y-2">
+      <ul class="space-y-6">
         <li>
-          <strong class="text-base">TA - Lafayette College:</strong>
-          <span>Guided coding projects.</span>
+          <a href="#" onclick="showProject('karoka')" class="text-base sour-gummy-bold">Karoka</a>
+          <div id="karoka" class="project-detail hidden mt-3 p-4 rounded-md">
+            <p class="sour-gummy">A 2D game teaching coding through play.</p>
+            <img src="assets/Thumb_Beta.png" alt="Karoka project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
+            <p class="text-center mt-3">
+              <a href="https://karoka.co" target="_blank" class="sour-gummy-bold">View on GitHub</a>
+            </p>
+          </div>
         </li>
         <li>
-          <strong class="text-base">Founder - From & For Mada:</strong>
-          <span>Teach students in Madagascar with coding skills.</span>
+          <a href="#" onclick="showProject('ai-companion')" class="text-base sour-gummy-bold">AI Companion</a>
+          <div id="ai-companion" class="project-detail hidden mt-3 p-4 rounded-md">
+            <p class="sour-gummy">An AI app for fun guidance.</p>
+            <img src="assets/ai.png" alt="AI Companion project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
+            <p class="text-center mt-3">
+              <a href="https://github.com/tiaL-ops/magicBall.git" target="_blank" class="sour-gummy-bold">View on GitHub</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#" onclick="showProject('my75hard')" class="text-base sour-gummy-bold">My75 Hard</a>
+          <div id="my75hard" class="project-detail hidden mt-3 p-4 rounded-md">
+            <p class="sour-gummy">A fitness tracker for goals, water, and reading.</p>
+            <img src="assets/Simulator Screenshot - iPhone 16 Pro - 2025-01-02 at 22.58.40.png" alt="My75 Hard project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
+            <p class="text-center mt-3">
+              <a href="https://github.com/tiaL-ops/my75.git" target="_blank" class="sour-gummy-bold">View on GitHub</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+
+    <!-- Project Management Skills -->
+    <div id="item3" class="item3">
+      <h2 class="text-2xl sour-gummy font-bold mb-4">Leadership</h2>
+      <ul class="space-y-4">
+        <li>
+          <strong class="sour-gummy-bold">TA - Lafayette College:</strong>
+          <p class="sour-gummy">Guided coding projects.</p>
+        </li>
+        <li>
+          <strong class="sour-gummy-bold">Founder - From & For Mada:</strong>
+          <p class="sour-gummy-italic">Teach students in Madagascar with coding skills.</p>
         </li>
       </ul>
     </div>
 
     <!-- Philosophy and Approach -->
     <div id="item4" class="item4">
-      <h2 class="text-lg font-bold mb-4">About</h2>
-      <p>I develop games, AI models, and software for myself and others to learn and have fun.</p>
+      <h2 class="text-lg sour-gummy font-bold mb-4">About</h2>
+      <p class="sour-gummy">I develop games, AI models, and software for myself and others to learn and have fun.</p>
     </div>
 
     <!-- Picture and Title -->
@@ -99,8 +148,8 @@
         </div>
         <div class="flip-card-back">
           <div class="text-center">
-            <h2 class="text-base font-extrabold mb-4 tracking-wide uppercase">Landy Rakotoarison</h2>
-            <p class="text-base font-light tracking-wide">Engineer | Developer | Designer</p>
+            <h2 class="sour-gummy-bold text-base font-extrabold mb-4 tracking-wide uppercase">Landy Rakotoarison</h2>
+            <p class="sour-gummy text-base font-light tracking-wide">Engineer | Developer | Designer</p>
           </div>
         </div>
       </div>
@@ -108,20 +157,19 @@
 
     <!-- Contact Information -->
     <div id="item6" class="item6">
-      <h2 class="text-base font-bold">Contact</h2>
-      <p><a href="mailto:rakotoal@lafayette.edu">rakotoal@lafayette.edu</a></p>
+      <h2 class="text-base sour-gummy-bold">Contact</h2>
+      <p class="sour-gummy"><a href="mailto:rakotoal@lafayette.edu">rakotoal@lafayette.edu</a></p>
     </div>
 
     <!-- Social Media Links -->
     <div id="item7" class="item7">
-      <h2 class="text-base font-bold">Social</h2>
+      <h2 class="text-base sour-gummy-bold">Social</h2>
       <ul>
-        <a href="#" target="_blank">in</a>
-        <a href="#" target="_blank">github</a>
+        <a href="#" target="_blank" class="sour-gummy">in</a>
+        <a href="#" target="_blank" class="sour-gummy">github</a>
       </ul>
     </div>
   </div>
 </body>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="script.js"></script>
-</html>

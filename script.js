@@ -3,6 +3,14 @@ const grid = document.getElementById("myGrid");
 const item4 = document.getElementById("item4");
 const item5 = document.getElementById("item5");
 
+document.getElementById("item5").addEventListener("mouseenter", () => {
+  document.getElementById("item5").classList.add("flipped");
+});
+
+document.getElementById("item5").addEventListener("mouseleave", () => {
+  document.getElementById("item5").classList.remove("flipped");
+});
+
 
 grid.classList.add("initial");
 

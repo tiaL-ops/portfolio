@@ -1,5 +1,5 @@
 body {
-    background-color: #F9E6CF; /* Warm peach */
+    background-color: #F9E6CF; 
     height: 100vh;
     margin: 0;
     display: flex;
@@ -10,12 +10,14 @@ body {
     color: #4C4C4C; /* Dark gray for text */
 }
 
+
+
 #myGrid {
-    width: 90%; /* Adjusted to fit larger items */
-    height: 90%; /* Adjusted to fit larger items */
+    width: 90%;
+    height: 90%; 
     display: grid;
     gap: 15px;
-    background-color: #F3D9B1; /* Light beige */
+   
     padding: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -26,21 +28,21 @@ body {
 }
 
 #myGrid div {
-    background-color: #F5B7A5; /* Dusty pink */
+    
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem; /* Larger padding for bigger size */
+    padding: 2rem;
     font-size: 1.2rem;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
     border-radius: 12px;
-    color: #4C4C4C; /* Dark gray text */
-    transition: transform 0.3s ease-in-out; /* Smooth hover animation */
+    color: #4C4C4C;
+    transition: transform 0.3s ease-in-out; 
 }
 
-#myGrid div:hover {
-    transform: scale(1.1); /* Slightly larger on hover */
+#myGrid div:not(#item5):hover {
+    transform: scale(1.1);
 }
 
 .item1 {
@@ -53,7 +55,8 @@ body {
     grid-column: 3;
     grid-row: 1 / span 3;
     background-color: #F5B7A5;
-    overflow: hidden;
+    overflow: auto;
+    height:100%;
 }
 
 .item3 {
@@ -71,14 +74,16 @@ body {
 .item5 {
     grid-column: 2;
     grid-row: 2 / 4;
-    background-color: #F5B7A5;
+    background-color: #F3D9B1;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     position: relative;
-    padding: 2rem; /* Larger padding */
+    padding: 2rem;
     box-sizing: border-box;
+    transform: none; /* Ensure no scaling effect is applied */
+    transition: none; 
 }
 
 .item6 {
@@ -107,6 +112,10 @@ body {
         transform: scale(1);
         opacity: 1;
     }
+}
+.item5:hover .flip-card-inner {
+    transform: rotateY(180deg); 
+    transition: transform 0.6s ease-in-out; 
 }
 
 .flip-card-inner {
@@ -139,7 +148,7 @@ body {
 
 .flip-card-back {
     background-color: #1E1E2F;
-    color: #4ECCA3; /* Accent color */
+    color: #4ECCA3; 
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;
