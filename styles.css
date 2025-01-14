@@ -1,84 +1,160 @@
 body {
-    background-color: #000000;
+    background-color: #F9E6CF; /* Warm peach */
     height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    font-family: 'Times New Roman', serif;
+    color: #4C4C4C; /* Dark gray for text */
 }
 
 #myGrid {
-    width: 100%; 
-    height: 100%; 
+    width: 90%; /* Adjusted to fit larger items */
+    height: 90%; /* Adjusted to fit larger items */
     display: grid;
-    gap: 10px; 
-    background-color: #1d2328; 
-    padding: 5px; 
-    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+    background-color: #F3D9B1; /* Light beige */
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 #myGrid div {
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: #F5B7A5; /* Dusty pink */
     text-align: center;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    padding: 10px; 
-    font-size: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Larger padding for bigger size */
+    font-size: 1.2rem;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    border-radius: 12px;
+    color: #4C4C4C; /* Dark gray text */
+    transition: transform 0.3s ease-in-out; /* Smooth hover animation */
 }
 
-
+#myGrid div:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
+}
 
 .item1 {
     grid-column: 1 / span 2;
     grid-row: 1;
-    border-radius: 5%;
-    background: #e8e3d8;
+    background-color: #F3D9B1;
 }
 
 .item2 {
     grid-column: 3;
     grid-row: 1 / span 3;
-    border-radius: 5%;
-    background: #e8e3d8;
+    background-color: #F5B7A5;
     overflow: hidden;
 }
 
 .item3 {
     grid-column: 1;
     grid-row: 3;
-    height: auto;
-    border-radius: 5%;
-    background: #e8e3d8;
+    background-color: #F3D9B1;
 }
 
 .item4 {
     grid-column: 1 / span 1;
     grid-row: 2;
-    border-radius: 5%;
-    background: #e8e3d8;
+    background-color: #F5B7A5;
 }
 
 .item5 {
-    grid-column: 2; 
-    grid-row: 2 / 4; 
-    width: 100%; 
-    height: 100%; 
-    border-radius: 5%; 
-    background: #e8e3d8; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    overflow: hidden; 
-    position: relative; 
-    padding: 10px; 
-    margin: auto; 
-    box-sizing: border-box; 
-   
+    grid-column: 2;
+    grid-row: 2 / 4;
+    background-color: #F5B7A5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem; /* Larger padding */
+    box-sizing: border-box;
 }
 
+.item6 {
+    grid-column: 1 / span 2;
+    grid-row: 4 / 5;
+    background-color: #F5B7A5;
+}
+
+.item7 {
+    grid-column: 3;
+    grid-row: 4;
+    background-color: #F3D9B1;
+}
+
+
+@keyframes shrinkAnimation {
+    0% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.25);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.item5:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #28293D;
+    color: #D1D1D1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back {
+    background-color: #1E1E2F;
+    color: #4ECCA3; /* Accent color */
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myGrid.visible #item1,
+#myGrid.visible #item3,
+#myGrid.visible #item4,
+#myGrid.visible #item2,
+#myGrid.visible #item6 
+#myGrid.visible #item7{
+    visibility: visible;
+    animation: shrinkAnimation 0.5s ease-in-out ;
+}
 @keyframes shrinkAnimation {
     0% {
         width: 150%; 
@@ -96,137 +172,4 @@ body {
         transform: scale(1); 
         opacity: 1; 
     }
-}
-
-
-
-.item6 {
-    grid-column: 1 / span 2;
-    grid-row: 4/5;
-    border-radius: 5%;
-    background: #e8e3d8;
-}
-
-.item7 {
-    grid-column: 3 / span 2;
-    grid-row: 4;
-    border-radius: 5%;
-    background: #e8e3d8;
-}
-
-
-/* General styles for visual improvement */
-.myGrid > div {
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#myGrid.initial #item1,
-#myGrid.initial #item3,
-#myGrid.initial #item4,
-#myGrid.initial #item2,
-#myGrid.initial #item6 ,
-#myGrid.initial #item7{
-    visibility: hidden;
-}
-
-#myGrid.initial #item5 {
-    width:100%;
-    width:100%;
-    border-radius: 5%;
-    background: #e8e3d8;
-    justify-content: center; 
-    align-items: flex-start; 
-    overflow: hidden; 
-    position: relative; 
-    padding: 10px; 
-}
-
-#myGrid.visible #item1,
-#myGrid.visible #item3,
-#myGrid.visible #item4,
-#myGrid.visible #item2,
-#myGrid.visible #item6 
-#myGrid.visible #item7{
-    visibility: visible;
-    animation: shrinkAnimation 0.5s ease-in-out ;
-}
-
-#myGrid.expanded #item5 {
-    grid-column: 2;
-    grid-row: 2/4;
-    border-radius: 5%;
-    background: #e8e3d8;
-    justify-content: center; 
-    align-items: flex-start; 
-    overflow: hidden; 
-    position: relative; 
-    padding: 10px; 
-}
-
-/* Overlay and Text initially hidden */
-#item2 .hover-overlay {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    z-index: 1;
-    transition: opacity 0.3s ease;
-   
-    
-}
-
-
-
-.flip-card-inner {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 1s ease-in-out;
-    transform-style: preserve-3d;
-    
-   
-}
-
-
-.item5:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; 
-   
-}
-
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.flip-card-back {
-    background-color: #2980b9;
-    color: rgb(0, 0, 0);
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

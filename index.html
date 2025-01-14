@@ -4,34 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landy Portfolio</title>
+ 
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
 </head>
 <body>
   <div id="myGrid">
-    <div id="item1" class="item1">
-        Item 1
+    <!-- Technical Skills -->
+    <div id="item1" class="item1"> 
+      <h2 class="text-lg font-bold mb-4 flex items-center"> 
+        <i class="fas fa-tools mr-2"></i> Skills
+      </h2>
+      <ul class="space-y-3">
+        <li class="flex items-center">
+          <i class="fas fa-code mr-3"></i>
+          <p><strong>Languages:</strong> Python, Java, JavaScript</p>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-layer-group mr-3"></i>
+          <p><strong>Frameworks:</strong> React, Flask, Phaser</p>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-wrench mr-3"></i>
+          <p><strong>Tools:</strong> Git, Docker, SQL</p>
+        </li>
+      </ul>
     </div>
 
-    <div id="item2" class="item2">Item 2</div>
+    <!-- Technical Projects -->
+    <div id="item2" class="item2">
+      <div class="scroll-container">
+        <ul class="space-y-6">
+          <li>
+            <a href="#" onclick="showProject('karoka')" class="text-base font-medium">Karoka</a>
+            <div id="karoka" class="project-detail hidden mt-3 p-4 rounded-md">
+              <p>A 2D game teaching coding through play.</p>
+              <img src="assets/Thumb_Beta.png" alt="Karoka project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
+              <p class="text-center mt-3">
+                <a href="https://karoka.co" target="_blank">View on GitHub</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <a href="#" onclick="showProject('ai-companion')" class="text-base font-medium">AI Companion</a>
+            <div id="ai-companion" class="project-detail hidden mt-3 p-4 rounded-md">
+              <p>An AI app for relationship guidance.</p>
+              <img src="assets/ai.png" alt="AI Companion project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
+              <p class="text-center mt-3">
+                <a href="https://github.com/tiaL-ops/magicBall.git" target="_blank">View on GitHub</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <a href="#" onclick="showProject('my75hard')" class="text-base font-medium">My75 Hard</a>
+            <div id="my75hard" class="project-detail hidden mt-3 p-4 rounded-md">
+              <p>A fitness tracker for goals, water, and reading.</p>
+              <img src="assets/Simulator Screenshot - iPhone 16 Pro - 2025-01-02 at 22.58.40.png" alt="My75 Hard project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
+              <p class="text-center mt-3">
+                <a href="https://github.com/tiaL-ops/my75.git" target="_blank">View on GitHub</a>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
     
+    <!-- Project Management Skills -->
     <div id="item3" class="item3">
-        Item3
+      <h2 class="text-lg font-bold mb-4">Leadership</h2>
+      <ul class="space-y-2">
+        <li>
+          <strong class="text-base">TA - Lafayette College:</strong>
+          <span>Guided coding projects.</span>
+        </li>
+        <li>
+          <strong class="text-base">Founder - From & For Mada:</strong>
+          <span>Teach students in Madagascar with coding skills.</span>
+        </li>
+      </ul>
     </div>
-    <div id="item4" class="item4">Item 4</div>
-    <div id="item5" class="item5">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                Item 5 Front
-            </div>
-            <div class="flip-card-back">
-                Item 5 Back
-            </div>
-        </div>
-    </div>
-    <div id="item6" class="item6"> Item 6</div>
 
-    <div id="item7" class="item7"></div>
+    <!-- Philosophy and Approach -->
+    <div id="item4" class="item4">
+      <h2 class="text-lg font-bold mb-4">About</h2>
+      <p>I develop games, AI models, and software for myself and others to learn and have fun.</p>
+    </div>
+
+    <!-- Picture and Title -->
+    <div id="item5" class="item5">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="assets/IMG_0839.JPG" alt="Landy Rakotoarison's Picture" />
+        </div>
+        <div class="flip-card-back">
+          <div class="text-center">
+            <h2 class="text-base font-extrabold mb-4 tracking-wide uppercase">Landy Rakotoarison</h2>
+            <p class="text-base font-light tracking-wide">Engineer | Developer | Designer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div id="item6" class="item6">
+      <h2 class="text-base font-bold">Contact</h2>
+      <p><a href="mailto:rakotoal@lafayette.edu">rakotoal@lafayette.edu</a></p>
+    </div>
+
+    <!-- Social Media Links -->
+    <div id="item7" class="item7">
+      <h2 class="text-base font-bold">Social</h2>
+      <ul>
+        <a href="#" target="_blank">in</a>
+        <a href="#" target="_blank">github</a>
+      </ul>
+    </div>
   </div>
-  <script src="script.js"></script>
 </body>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </html>
