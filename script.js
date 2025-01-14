@@ -1,13 +1,13 @@
 // Select the grid and items
 const grid = document.getElementById("myGrid");
 const item4 = document.getElementById("item4");
-const item2 = document.getElementById("item2");
+const item5 = document.getElementById("item5");
 
 
 grid.classList.add("initial");
 
 // Add a click event listener to item2
-item2.addEventListener("click", () => {
+item5.addEventListener("mouseenter", () => {
   grid.classList.remove("initial");
   grid.classList.add("visible");
 });
