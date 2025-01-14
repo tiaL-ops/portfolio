@@ -1,5 +1,5 @@
 body {
-    background-color: #F9E6CF; 
+    
     height: 100vh;
     margin: 0;
     display: flex;
@@ -41,9 +41,15 @@ body {
     transition: transform 0.3s ease-in-out; 
 }
 
-#myGrid div:not(#item5):hover {
+.item1:hover ,
+.item2:hover,
+.item3:hover,
+.item4:hover,
+.item6:hover,
+.item7:hover{
     transform: scale(1.1);
 }
+
 
 .item1 {
     grid-column: 1 / span 2;
