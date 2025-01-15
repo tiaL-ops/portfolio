@@ -46,7 +46,8 @@ body {
 .item3:hover,
 .item4:hover,
 .item6:hover,
-.item7:hover{
+.item7:hover,
+.item2 li:hover .project-detail{
     transform: scale(1.1);
 }
 
