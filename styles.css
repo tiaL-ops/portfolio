@@ -104,7 +104,25 @@ body {
     grid-row: 4;
     background-color: #F3D9B1;
 }
+@media (max-width: 768px) {
+    #myGrid {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+        gap: 10px; 
+    }
 
+    
+    .item1, .item3, .item4, .item6, .item7 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .item2, .item5 {
+        grid-column: auto;
+        grid-row: auto;
+        height: 400px; 
+    }
+}
 
 @keyframes shrinkAnimation {
     0% {
