@@ -1,186 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landy Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landy Rakotoarison Portfolio</title>
+ 
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-p6O/n5GbcKFNvv4wiKXB8oYKM4iG4omT1+Ai+ZfqvP1xkxn5v/kffAO07Mjk5yrQtxUh0y+Bs5rsX3bpi6Uwyg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 
+ 
   <style>
     body {
-      font-family: "Sour Gummy", serif;
-      background-color: #FDF6F0; 
-      color: #333;
+      margin: 0;
+      background-color: #0a0a0a;
+      color: #fcefdc;
+      font-family: 'Inter', sans-serif;
     }
 
-    h2 {
-      font-family: "Sour Gummy", serif;
-      font-weight: 700;
-      color: #FF6B6B;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.5rem;
+      font-size: 1.2rem;
     }
-
-    .sour-gummy-bold {
-      font-family: "Sour Gummy", serif;
-      font-weight: 700;
-      color: #6B5B95; 
-    }
-
-    .sour-gummy {
-      font-family: "Sour Gummy", serif;
-      font-weight: 400;
-      color: #008080;
-    }
-
-    .sour-gummy-italic {
-      font-family: "Sour Gummy", serif;
-      font-weight: 400;
-      font-style: italic;
-      color: #FFB347; 
-    }
-
-    a {
-      color: #3498DB; 
+    nav a {
       text-decoration: none;
+      color: #fcefdc;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffcc99; }
+
+    #about {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;        /* center left/right vertically */
+      padding: 3rem;
+      flex-wrap: wrap;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .left {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;         /* center the PNG & caption */
+    }
+    #picLandy img {
+      max-width: 100%;
+      width: 800px;               /* or adjust to taste */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    #picLandy figcaption {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+    #picLandy figcaption em {
+      font-style: italic;
     }
 
-    strong {
-      color: #D72638; 
+    .right {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;        
+      justify-content: center;   
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .social-icons {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .social-icons a img {
+      width: 2.2rem;           
+      height: auto;
+      display: block;
+ 
+      filter: brightness(0) invert(1);
+      transition: transform 0.2s;
+    }
+    .social-icons a:hover img {
+      transform: scale(1.2);
     }
 
-    .flip-card-front img {
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .role-item {
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .role-item::before {
+      content: "↳";
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .right {
+        margin-top: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="myGrid">
-    <!-- Technical Skills -->
-    <div id="item1" class="item1">
-    
-      <ul class="space-y-3">
-        <li>
-          <strong class="sour-gummy-bold"> Programming Languages:</strong>
-          <p class="sour-gummy">Python, Java, JavaScript, SQL</p>
-        </li>
-        <li>
-          <strong class="sour-gummy-bold">Frameworks:</strong>
-          <p class="sour-gummy-italic">React, Flask, Phaser,Spring Boot,Firebase</p>
-        </li>
-        <li>
-          <strong class="sour-gummy-bold"> Human Languages :D </strong>
-          <p class="sour-gummy">French, English, Malagasy, Spanish</p>
-        </li>
-      </ul>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#awards">Awards</a>
+    <a href="#goals">Goals</a>
+  </nav>
+
+  <section id="about">
+    <div class="left">
+      <figure id="picLandy">
+        <img src="/assets/aboutme.png"
+             alt="Landy Rakotoarison name & portrait graphic">
+        <figcaption>
+          <p>Originally from Madagascar, now studying at Lafayette College (US) as a full-ride international scholar</p>
+          <p><em>Computer Science, Class of 2026.</em></p>
+        </figcaption>
+      </figure>
     </div>
 
-    <!-- Technical Projects -->
-    <div id="item2" class="item2">
-      <ul class="space-y-6">
-        <li>
-          <strong class="sour-gummy-bold"> Technical Projects:</strong>
-        </li>
-        <li>
-          <a href="#" onclick="showProject('karoka')" class="text-base sour-gummy-bold">Karoka</a>
-          <div id="karoka" class="project-detail hidden mt-3 p-4 rounded-md">
-            <p class="sour-gummy">A 2D game teaching coding through play.</p>
-            <img src="assets/Thumb_Beta.png" alt="Karoka project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
-            <p class="text-center mt-3">
-              <a href="https://karoka.co" target="_blank" class="sour-gummy-bold">Play Beta Game</a>
-            </p>
-          </div>
-        </li>
-        <li>
-          <a href="#" onclick="showProject('ai-companion')" class="text-base sour-gummy-bold">AI Companion</a>
-          <div id="ai-companion" class="project-detail hidden mt-3 p-4 rounded-md">
-            <p class="sour-gummy">An AI app for fun guidance.</p>
-            <img src="assets/ai.png" alt="AI Companion project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
-            <p class="text-center mt-3">
-              <a href="https://github.com/tiaL-ops/magicBall.git" target="_blank" class="sour-gummy-bold">View on GitHub</a>
-            </p>
-          </div>
-        </li>
-        <li>
-          <a href="#" onclick="showProject('my75hard')" class="text-base sour-gummy-bold">My75 Hard</a>
-          <div id="my75hard" class="project-detail hidden mt-3 p-4 rounded-md">
-            <p class="sour-gummy">A fitness tracker for goals, water, and reading.</p>
-            <img src="assets/Simulator Screenshot - iPhone 16 Pro - 2025-01-02 at 22.58.40.png" alt="My75 Hard project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
-            <p class="text-center mt-3">
-              <a href="https://github.com/tiaL-ops/my75.git" target="_blank" class="sour-gummy-bold">View on GitHub</a>
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    
-
-   
-  <!-- Project Management Skills -->
-<div id="item3" class="item3">
- 
-  <ul class="space-y-4">
-    <li>Achievements:</li>
-    <li>
-      <strong class="sour-gummy-bold">Karoka (October 2024-Ongoing)</strong>
-      <p class="sour-gummy">Built an <a href="https://karoka.co" target="_blank" class="text-blue-500 underline">educational game</a> to teach coding</p>
-      <p class="sour-gummy-italic">500+ Active Users Beta Version</p>
-    </li>
-    <li>
-      <strong class="sour-gummy-bold">Non-Profit - From&For Mada:</strong>
-      <p class="sour-gummy">
-        Implemented a <a href="https://www.fromandformada.com/" target="_blank" class="text-blue-500 underline">coding bootcamp</a> to teach Mblock and Python.
-      </p>
-      <p class="sour-gummy-italic">200+ Students Impacted</p>
-    </li>
-  </ul>
-</div>
-
-
-    <!-- Philosophy and Approach -->
-    <div id="item4" class="item4">
-      <p class="sour-gummy" style="font-size: 1.4rem;">"Even when it is hard"</p>
-
-    </div>
-
-    <!-- Picture and Title -->
-    <div id="item5" class="item5">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="assets/IMG_0839.JPG" alt="Landy Rakotoarison's Picture" />
-        </div>
-        <div class="flip-card-back">
-          <div class="text-center">
-            <h2 class="sour-gummy-bold text-base font-extrabold mb-4 tracking-wide uppercase">Landy Rakotoarison</h2>
-            <p class="sour-gummy text-base font-light tracking-wide"> FullStack Engineer | Developer | Designer</p>
-          </div>
-        </div>
+    <div class="right">
+     
+      <div class="social-icons">
+        <a href="#" aria-label="GitHub">
+          <img src="icons/github.png" alt="GitHub icon">
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <img src="icons/linkedin.png" alt="LinkedIn icon">
+        </a>
       </div>
+      
+      <div class="role-item">FULL STACK DEVELOPER</div>
+      <div class="role-item">AI RESEARCHER</div>
+      <div class="role-item">TEACHER / MENTOR</div>
     </div>
+  </section>
 
-    <!-- Contact Information -->
-    <div id="item6" class="item6">
-      <h2 class="text-base sour-gummy-bold">Contact</h2>
-      <p class="sour-gummy"><a href="mailto:rakotoal@lafayette.edu">rakotoal@lafayette.edu</a></p>
-    </div>
-
-    <!-- Social Media Links -->
-    <div id="item7" class="item7">
-      <h2 class="text-base sour-gummy-bold">Social</h2>
-      <ul>
-        <a href="https://www.linkedin.com/in/landy-rakotoarison-4018101a1/" target="_blank" class="sour-gummy">in</a>
-        <a href="https://github.com/tiaL-ops" target="_blank" class="sour-gummy">github</a>
-        
-      </ul>
-    </div>
-  </div>
 </body>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+</html>
