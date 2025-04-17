@@ -1,186 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landy Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
-    body {
-      font-family: "Sour Gummy", serif;
-      background-color: #FDF6F0; 
-      color: #333;
-    }
+  <title>Landy Rakotoarison Portfolio</title>
+ 
+<link
+href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+rel="stylesheet"
+/>
 
-    h2 {
-      font-family: "Sour Gummy", serif;
-      font-weight: 700;
-      color: #FF6B6B;
-    }
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+ 
 
-    .sour-gummy-bold {
-      font-family: "Sour Gummy", serif;
-      font-weight: 700;
-      color: #6B5B95; 
-    }
-
-    .sour-gummy {
-      font-family: "Sour Gummy", serif;
-      font-weight: 400;
-      color: #008080;
-    }
-
-    .sour-gummy-italic {
-      font-family: "Sour Gummy", serif;
-      font-weight: 400;
-      font-style: italic;
-      color: #FFB347; 
-    }
-
-    a {
-      color: #3498DB; 
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    strong {
-      color: #D72638; 
-    }
-
-    .flip-card-front img {
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-  </style>
 </head>
 <body>
-  <div id="myGrid">
-    <!-- Technical Skills -->
-    <div id="item1" class="item1">
+
+  <nav>
+    <a href="#about">Me!</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#awards">Awards</a>
     
-      <ul class="space-y-3">
-        <li>
-          <strong class="sour-gummy-bold"> Programming Languages:</strong>
-          <p class="sour-gummy">Python, Java, JavaScript, SQL</p>
-        </li>
-        <li>
-          <strong class="sour-gummy-bold">Frameworks:</strong>
-          <p class="sour-gummy-italic">React, Flask, Phaser,Spring Boot,Firebase</p>
-        </li>
-        <li>
-          <strong class="sour-gummy-bold"> Human Languages :D </strong>
-          <p class="sour-gummy">French, English, Malagasy, Spanish</p>
-        </li>
-      </ul>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="left">
+      <figure id="picLandy">
+        <img src="/assets/aboutme.png" alt="Landy Rakotoarison">
+        <figcaption>
+          <p>Originally from Madagascar, now studying at Lafayette College (US) as a full-ride international scholar</p>
+          <span class="material-icons graduation-icon">school</span>
+          <em>Computer Science, Class of 2026.</em>
+        </figcaption>
+      </figure>
     </div>
-
-    <!-- Technical Projects -->
-    <div id="item2" class="item2">
-      <ul class="space-y-6">
-        <li>
-          <strong class="sour-gummy-bold"> Technical Projects:</strong>
-        </li>
-        <li>
-          <a href="#" onclick="showProject('karoka')" class="text-base sour-gummy-bold">Karoka</a>
-          <div id="karoka" class="project-detail hidden mt-3 p-4 rounded-md">
-            <p class="sour-gummy">A 2D game teaching coding through play.</p>
-            <img src="assets/Thumb_Beta.png" alt="Karoka project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
-            <p class="text-center mt-3">
-              <a href="https://karoka.co" target="_blank" class="sour-gummy-bold">Play Beta Game</a>
-            </p>
-          </div>
-        </li>
-        <li>
-          <a href="#" onclick="showProject('ai-companion')" class="text-base sour-gummy-bold">AI Companion</a>
-          <div id="ai-companion" class="project-detail hidden mt-3 p-4 rounded-md">
-            <p class="sour-gummy">An AI app for fun guidance.</p>
-            <img src="assets/ai.png" alt="AI Companion project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
-            <p class="text-center mt-3">
-              <a href="https://github.com/tiaL-ops/magicBall.git" target="_blank" class="sour-gummy-bold">View on GitHub</a>
-            </p>
-          </div>
-        </li>
-        <li>
-          <a href="#" onclick="showProject('my75hard')" class="text-base sour-gummy-bold">My75 Hard</a>
-          <div id="my75hard" class="project-detail hidden mt-3 p-4 rounded-md">
-            <p class="sour-gummy">A fitness tracker for goals, water, and reading.</p>
-            <img src="assets/Simulator Screenshot - iPhone 16 Pro - 2025-01-02 at 22.58.40.png" alt="My75 Hard project thumbnail" class="w-24 h-24 mt-3 object-cover rounded-md mx-auto">
-            <p class="text-center mt-3">
-              <a href="https://github.com/tiaL-ops/my75.git" target="_blank" class="sour-gummy-bold">View on GitHub</a>
-            </p>
-          </div>
-        </li>
-      </ul>
+    <div class="right">
+      <div class="social-icons">
+        <a href="https://github.com/tiaL-ops"><img src="icons/github.png" alt="GitHub icon"></a>
+        <a href="https://www.linkedin.com/in/landy-rakotoarison-4018101a1/"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+      </div>
+      <div class="role-item">FULL STACK DEVELOPER</div>
+      <div class="role-item">AI RESEARCHER</div>
+      <div class="role-item">TEACHER / MENTOR</div>
     </div>
-    
+  </section>
 
-   
-  <!-- Project Management Skills -->
-<div id="item3" class="item3">
- 
-  <ul class="space-y-4">
-    <li>Achievements:</li>
-    <li>
-      <strong class="sour-gummy-bold">Karoka (October 2024-Ongoing)</strong>
-      <p class="sour-gummy">Built an <a href="https://karoka.co" target="_blank" class="text-blue-500 underline">educational game</a> to teach coding</p>
-      <p class="sour-gummy-italic">500+ Active Users Beta Version</p>
-    </li>
-    <li>
-      <strong class="sour-gummy-bold">Non-Profit - From&For Mada:</strong>
-      <p class="sour-gummy">
-        Implemented a <a href="https://www.fromandformada.com/" target="_blank" class="text-blue-500 underline">coding bootcamp</a> to teach Mblock and Python.
-      </p>
-      <p class="sour-gummy-italic">200+ Students Impacted</p>
-    </li>
-  </ul>
-</div>
-
-
-    <!-- Philosophy and Approach -->
-    <div id="item4" class="item4">
-      <p class="sour-gummy" style="font-size: 1.4rem;">"Even when it is hard"</p>
-
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="skills-left">
+      <h2 class="reveal">Skills:</h2>
     </div>
-
-    <!-- Picture and Title -->
-    <div id="item5" class="item5">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="assets/IMG_0839.JPG" alt="Landy Rakotoarison's Picture" />
-        </div>
-        <div class="flip-card-back">
-          <div class="text-center">
-            <h2 class="sour-gummy-bold text-base font-extrabold mb-4 tracking-wide uppercase">Landy Rakotoarison</h2>
-            <p class="sour-gummy text-base font-light tracking-wide"> FullStack Engineer | Developer | Designer</p>
-          </div>
+    <div class="skills-right">
+      <div class="skills-box reveal">
+        <img src="icons/coding.png" alt="Code icon" class="skills-icon">
+        <div class="skills-text">
+          <p><strong>Languages:</strong> Python, JavaScript (Node.js, Express), SQL, Java</p>
+          <p><strong>Frameworks &amp; Tools:</strong> Firebase, Phaser.js, BetterSQLite, REST APIs, Git, Kaggle, Tiled, Trello</p>
+          <p><strong>ML/DS Tools:</strong> Scikit‑learn, TensorFlow, Pandas, NumPy, Matplotlib, data cleaning, evaluation metrics</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Contact Information -->
-    <div id="item6" class="item6">
-      <h2 class="text-base sour-gummy-bold">Contact</h2>
-      <p class="sour-gummy"><a href="mailto:rakotoal@lafayette.edu">rakotoal@lafayette.edu</a></p>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="experience-left">
+      <h2 class="reveal">Experiences:</h2>
     </div>
+    <div class="experience-right">
+      <div class="experience-box reveal">
+        <h3>Data Scientist Intern</h3>
+        <ul>
+          <li>Built data & geo‑visualizations in Python to support five interdisciplinary aviation operations</li>
+          <li>Used Pandas, Plotly, and Folium to represent critical infrastructure and route insights</li>
+        </ul>
+        <div class="experience-date">May – Aug 2023</div>
+      </div>
+      <div class="experience-box reveal">
+        <h3>Teacher Assistant</h3>
+        <ul>
+          <li>CS 104 (Intro to Game Programming – Java) &amp; CM 151 (Computational Science – Python)</li>
+          <li>Assisted in class projects, code reviews, debugging, and mentoring students</li>
+        </ul>
+        <div class="experience-date">Jan 2024 – Present</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Social Media Links -->
-    <div id="item7" class="item7">
-      <h2 class="text-base sour-gummy-bold">Social</h2>
-      <ul>
-        <a href="https://www.linkedin.com/in/landy-rakotoarison-4018101a1/" target="_blank" class="sour-gummy">in</a>
-        <a href="https://github.com/tiaL-ops" target="_blank" class="sour-gummy">github</a>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-left">
+      <h2 class="reveal">Projects:</h2>
+    </div>
+    <div class="projects-right">
+      <div class="project-card reveal" id="karoka-card">
+        <h3>Karoka</h3>
+        <p>AI‑powered 2D game that teaches Python through personalized learning styles</p>
+        <div class="project-date">Dec 2024 – Present</div>
+      </div>
+    
+<div class="project-card reveal" id="miningai-card">
+  <h3>Mining.AI</h3>
+ 
+  <p>Machine-learning research project focused on improving mineral extraction</p>
+  <div class="project-date">Mar 2025 – Present</div>
+</div>
+
+<div class="project-card reveal" id="ffmada-card">
+  <h3>F&amp;F Mada</h3>
+  <p>Non‑profit bootcamp that offers free Python courses</p>
+  <div class="project-date">May 2023 – Present</div>
+</div>
+
+<div class="project-card reveal" id="datanz-card">
+  <h3>Datanz</h3>
+  <p>Healthcare platform for district government in Tanzania to monitor facilities</p>
+  <div class="project-date">Jan 2025 – Present</div>
+</div>
+
+  </section>
+
+  <!-- KAROKA MODAL -->
+  <div id="karoka-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content reveal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h3>Karoka</h3>
+      <img src="/assets/karoka.png" alt="Karoka screenshot" class="modal-image">
+      <div class="modal-body">
+        <p>Karoka is an adaptive 2D game that teaches Python through personalized learning styles (Visual, Auditory, Logical, Read/Write) made for students who haven’t thrived in traditional school systems.</p>
+        <p>I started this solo in December 2024... Used by 500+ beta testers so far.</p>
+        <p>
+          See the beta version to get updates pretty soon!  
+          <a href="https://karoka.co/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="beta-link">
+            Here!
+          </a>
+        </p>
         
-      </ul>
+        <p>I’m currently researching LLM integration for adaptive feedback—part of my senior thesis!</p>
+      </div>
+      <div class="modal-extra">
+        <div class="modal-item">
+          <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
+          <span>Beta version tested by 500, research refinement approved as thesis!</span>
+        </div>
+        <div class="modal-item">
+          <img src="icons/code.png" alt="Code icon" class="modal-icon">
+          <span>Built with Phaser.js, JS, Firebase, Python</span>
+        </div>
+      </div>
+      
     </div>
   </div>
+  <!-- MINING.AI MODAL -->
+<div id="miningai-modal" class="modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content reveal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <h3>MINING.AI</h3>
+    <img src="/assets/miningai.png" alt="Open‑pit mine" class="modal-image">
+    <div class="modal-body">
+      <p>Yes I generated this image from chat(guilty haha!)</p>
+      <p>For this project, my teammate and I are exploring how AI can support the mining industry — specifically in improving mineral extraction through smarter prediction models.</p>
+      <p>(Details coming soon; we’re holding off until the Pan‑African Robotics Competition wraps!)</p>
+      <p>We’re experimenting with both standalone and hybrid models, including CNNs, Random Forests, and Transformers, to compare their performance on soil data.</p>
+    </div>
+    <div class="modal-extra">
+      <div class="modal-item">
+        <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
+        <span>Selected as a Top 30 team (out of 100+) in the PARC Competition, representing Madagascar (ongoing!)</span>
+      </div>
+      <div class="modal-item">
+        <img src="icons/code.png" alt="Code icon" class="modal-icon">
+        <span>Trained with PyTorch, scikit‑learn, Python</span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- F&F MADA MODAL -->
+<div id="ffmada-modal" class="modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content reveal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <h3>F&amp;F Mada</h3>
+    <img src="/assets/ffmada.jpg" alt="F&amp;F Mada cohort" class="modal-image">
+    <div class="modal-body">
+      <p>I know this one is not purely technical, but it means a lot to me. I started to learn coding by myself, and that path led to building real apps, programming a robot, representing Madagascar on the global stage, 
+        and earning scholarships to study in the US.
+        I want to give back those opportunities by teaching others 
+        who may need it.</p>
+        <p>
+          
+          <a href="https://www.fromandformada.com/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="beta-link">
+             See what we did!
+          </a>
+    </div>
+    <div class="modal-extra">
+      <div class="modal-item">
+        <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
+        <span>200+ people trained, 3 schools impacted, 5 volunteers trained</span>
+      </div>
+      <div class="modal-item">
+        <img src="icons/code.png" alt="Code icon" class="modal-icon">
+        <span>Teaching Python &amp; mBlock</span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- DATANZ MODAL -->
+<div id="datanz-modal" class="modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content reveal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <h3>Datanz</h3>
+    <img src="/assets/datanz.png" alt="Datanz dashboard" class="modal-image">
+    <div class="modal-body">
+      <p>As part of our Software Engineering capstone, our team of four was tasked with building a tool to help monitor and improve healthcare facility access in Tanzania.</p>
+      <p>The goal: create a website that local government districts can use to track, assess, and visualize healthcare data, all in a simple, accessible way. I took the lead on project coordination and technical backend, including:</p>
+      <ul>
+        <li>Task planning and weekly sprint management</li>
+        <li>Resolving Git merge conflicts and maintaining codebase stability</li>
+        <li>Designing and implementing the database to handle incoming survey data</li>
+        <li>Setting up authentication (login/signup) and structured data storage for patient & facility records</li>
+        <li>Ensuring the system can generate insights like average wait times and client satisfaction scores</li>
+        <li>Building user‑friendly filters so patients can explore and access reports easily</li>
+      </ul>
+      <p>
+
+      </p>
+    </div>
+    <div class="modal-extra">
+      <div class="modal-item">
+        <img src="icons/code.png" alt="Code icon" class="modal-icon">
+        <span>Building with Express, Node.js, SQL, JavaScript</span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<section id="awards">
+  <div class="awards-left">
+    <h2 class="reveal">Awards and Recognitions:</h2>
+  </div>
+  <div class="awards-right">
+
+    <div class="award-card reveal">
+      <span class="material-icons award-icon">emoji_events</span>
+      <h3>Awesomeness of 2026</h3>
+      <p>Selected top 5 students in class (700+ students)</p>
+    </div>
+
+    <div class="award-card reveal">
+      <span class="material-icons award-icon">work</span>
+      <h3>Bergh Family Award (2023)</h3>
+      <p>Academic, leadership & internship excellence</p>
+    </div>
+
+    <div class="award-card reveal">
+      <span class="material-icons award-icon">school</span>
+      <h3>Van Dyke Prize (2024)</h3>
+      <p>Impactful summer project (coding education bootcamp)</p>
+    </div>
+
+    <div class="award-card reveal">
+      <span class="material-icons award-icon">science</span>
+      <h3>Pan‑African Robotics Competition</h3>
+      <p>Top 30/100+ teams; ML research (ongoing)</p>
+    </div>
+
+    <div class="award-card reveal">
+      <span class="material-icons award-icon">smart_toy</span>
+      <h3>Robotex Estonia (2019)</h3>
+      <p>International robotics competitor / First Madagascar</p>
+    </div>
+
+    <div class="award-card reveal">
+      <span class="material-icons award-icon">handshake</span>
+      <h3>FIRST (2020)</h3>
+      <p>Tech mentor for Team Madagascar (Top 5/180 teams)</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <script src="/scripts.js"></script>
 </body>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+</html>
