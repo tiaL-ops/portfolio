@@ -31,11 +31,11 @@ nav a:hover { color: #ffcc99; }
 .left {
   flex: 1;
   min-width: 300px;
-  text-align: center;         /* center the PNG & caption */
+  text-align: center;         
 }
 #picLandy img {
   max-width: 100%;
-  width: 800px;               /* or adjust to taste */
+  width: 800px;              
   height: auto;
   display: block;
   margin: 0 auto;
@@ -100,7 +100,6 @@ nav a:hover { color: #ffcc99; }
 }
 
 
-
 #skills {
   padding: 3rem;
 }
@@ -111,26 +110,7 @@ nav a:hover { color: #ffcc99; }
   color: #fcefdc;
 }
 
-/* scrollable container */
-.skills {
-  max-height: 400px;      
-  overflow-y: auto;
-  padding-right: 1rem;   
-}
 
-xs
-.skills-box {
-  display: flex;
-  align-items: center; 
-  gap: 1.5rem;            
-  border: 2px solid #fcefdc;
-  border-radius: 40px;
-  padding: 1.2rem;       
-  
-  max-width: 700px;       
-  width: 90%;              
-  margin: 0 auto;          
-}
 
 
 
@@ -139,8 +119,8 @@ xs
   opacity: 0;
   transform: translateY(40px);              
   transition: 
-    opacity 1.5s ease-in-out,                
-    transform 1.5s ease-in-out;             
+    opacity 1s ease-in-out,                
+    transform 1s ease-in-out;             
   will-change: opacity, transform;
 }
 
@@ -151,39 +131,168 @@ xs
 }
 
 
-
-.skills {
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 1rem;
-}
-.skills-box {
+/* SKILLS two‑column wrapper */
+#skills {
   display: flex;
-  align-items: center;     
-  gap: 1.5rem;
+  align-items: flex-start;    
+  gap: 2rem;
+  padding: 9rem;
+  flex-wrap: wrap;
+}
+
+/* left column: the title */
+.skills-left {
+  flex: 1;
+  min-width: 200px;
+}
+.skills-left h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  color: #fcefdc;
+}
+
+/* right column: the scrollable box */
+.skills-right {
+  flex: 2;
+  max-width: 700px;
+  width: 100%;
+  
+}
+
+/* reuse your existing .skills-box styling */
+.skills-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
   border: 2px solid #fcefdc;
   border-radius: 40px;
-  padding: 1.2rem;
-  max-width: 700px;
-  width: 90%;
-  margin: 0 auto;
+  padding: 2rem;
+  background: transparent;
+
+
+ 
+
 }
+
+/* icon + text remain as before */
 .skills-icon {
   width: 4rem;
   filter: brightness(0) invert(1);
 }
 .skills-text p {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
-/* media queries… */
+
+  /* ─── EXPERIENCE SECTION ─── */
+#experience {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+.experience-left {
+  flex: 1;
+  min-width: 200px;
+}
+.experience-left h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  color: #fcefdc;
+}
+
+/* right side: the two cards */
+.experience-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-box {
+  border: 2px solid #fcefdc;
+  border-radius: 40px;
+  padding: 2rem;
+  background: transparent;
+  text-align: left;
+}
+
+.experience-box h3 {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.experience-box ul {
+  margin: 0 0 1.5rem 1.2rem;
+  list-style: disc;
+}
+
+.experience-box ul li {
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+  font-size: 1.1rem;
+}
+
+.experience-date {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fcefdc;
+}
+
+/* ─── SCROLL REVEAL (reuse from Skills) ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-in-out,
+              transform 1s ease-in-out;
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 @media (max-width: 768px) {
-  .skills-box {
+  #experience {
     flex-direction: column;
     text-align: center;
+  }
+  .experience-right {
+    max-width: none;
+  }
+  .experience-box {
+    padding: 1.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #skills {
+    flex-direction: column;
+    text-align: center;
+  }
+  .skills-right {
+    max-width: none;
+  
+  }
+  .skills-box {
+    flex-direction: column;
   }
   .skills-icon {
     margin-bottom: 1rem;
   }
 }
+
