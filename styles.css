@@ -495,3 +495,109 @@ nav a:hover { color: #ffcc99; }
   height: auto;
   display: block;
 }
+
+/* ─── AWARDS SECTION ─── */
+#awards {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+.awards-left {
+  flex: 1;
+  min-width: 200px;
+}
+.awards-left h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  color: #fcefdc;
+}
+
+.awards-right {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* card styling */
+.award-card {
+  border: 2px solid #fcefdc;
+  border-radius: 40px;
+  padding: 2rem;
+  text-align: center;
+  background: transparent;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+.award-card:hover {
+  background: #fcefdc;
+  color: #0a0a0a;
+  transform: translateY(-5px);
+}
+
+/* icon above each card */
+.award-card i,
+.award-card .award-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  color: inherit;           /* matches text color */
+}
+.award-icon {
+  width: 2.5rem;
+  height: auto;
+}
+
+.award-card .award-icon {
+  font-family: 'Material Icons';
+  font-size: 2.5rem;
+  display: block;
+  margin: 0 auto 1rem;
+  color: inherit;     /* matches your text color */
+}
+
+.award-card h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.award-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* reuse scroll‑reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-in-out,
+              transform 1s ease-in-out;
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  #awards {
+    flex-direction: column;
+    text-align: center;
+  }
+  .awards-right {
+    grid-template-columns: 1fr;
+  }
+}
