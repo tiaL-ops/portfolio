@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Landy Rakotoarison Portfolio</title>
+ 
+<link
+href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+rel="stylesheet"
+/>
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
  
@@ -13,12 +19,12 @@
 <body>
 
   <nav>
-    <a href="#about">About</a>
+    <a href="#about">Me!</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#awards">Awards</a>
-    <a href="#goals">Goals</a>
+    
   </nav>
 
   <!-- ABOUT -->
@@ -28,14 +34,15 @@
         <img src="/assets/aboutme.png" alt="Landy Rakotoarison">
         <figcaption>
           <p>Originally from Madagascar, now studying at Lafayette College (US) as a full-ride international scholar</p>
-          <p><em>Computer Science, Class of 2026.</em></p>
+          <span class="material-icons graduation-icon">school</span>
+          <em>Computer Science, Class of 2026.</em>
         </figcaption>
       </figure>
     </div>
     <div class="right">
       <div class="social-icons">
-        <a href="#"><img src="icons/github.png" alt="GitHub icon"></a>
-        <a href="#"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+        <a href="https://github.com/tiaL-ops"><img src="icons/github.png" alt="GitHub icon"></a>
+        <a href="https://www.linkedin.com/in/landy-rakotoarison-4018101a1/"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
       </div>
       <div class="role-item">FULL STACK DEVELOPER</div>
       <div class="role-item">AI RESEARCHER</div>
@@ -96,9 +103,10 @@
         <p>AI‑powered 2D game that teaches Python through personalized learning styles</p>
         <div class="project-date">Dec 2024 – Present</div>
       </div>
-     <!-- inside your #projects grid -->
+    
 <div class="project-card reveal" id="miningai-card">
   <h3>Mining.AI</h3>
+ 
   <p>Machine-learning research project focused on improving mineral extraction</p>
   <div class="project-date">Mar 2025 – Present</div>
 </div>
@@ -123,10 +131,20 @@
     <div class="modal-content reveal">
       <button class="modal-close" aria-label="Close">&times;</button>
       <h3>Karoka</h3>
-      <img src="icons/karoka.png" alt="Karoka screenshot" class="modal-image">
+      <img src="/assets/karoka.png" alt="Karoka screenshot" class="modal-image">
       <div class="modal-body">
         <p>Karoka is an adaptive 2D game that teaches Python through personalized learning styles (Visual, Auditory, Logical, Read/Write) made for students who haven’t thrived in traditional school systems.</p>
         <p>I started this solo in December 2024... Used by 500+ beta testers so far.</p>
+        <p>
+          See the beta version to get updates pretty soon!  
+          <a href="https://karoka.co/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="beta-link">
+            Here!
+          </a>
+        </p>
+        
         <p>I’m currently researching LLM integration for adaptive feedback—part of my senior thesis!</p>
       </div>
       <div class="modal-extra">
@@ -148,8 +166,9 @@
   <div class="modal-content reveal">
     <button class="modal-close" aria-label="Close">&times;</button>
     <h3>MINING.AI</h3>
-    <img src="icons/miningai.png" alt="Open‑pit mine" class="modal-image">
+    <img src="/assets/miningai.png" alt="Open‑pit mine" class="modal-image">
     <div class="modal-body">
+      <p>Yes I generated this image from chat(guilty haha!)</p>
       <p>For this project, my teammate and I are exploring how AI can support the mining industry — specifically in improving mineral extraction through smarter prediction models.</p>
       <p>(Details coming soon; we’re holding off until the Pan‑African Robotics Competition wraps!)</p>
       <p>We’re experimenting with both standalone and hybrid models, including CNNs, Random Forests, and Transformers, to compare their performance on soil data.</p>
@@ -174,14 +193,25 @@
   <div class="modal-content reveal">
     <button class="modal-close" aria-label="Close">&times;</button>
     <h3>F&amp;F Mada</h3>
-    <img src="icons/ffmada.png" alt="F&amp;F Mada cohort" class="modal-image">
+    <img src="/assets/ffmada.jpg" alt="F&amp;F Mada cohort" class="modal-image">
     <div class="modal-body">
-      <p>I know this one is not purely technical, but it means a lot to me. I started to learn coding by myself, and that path led to building real apps, programming a robot, representing Madagascar on the global stage, and earning scholarships to study in the US. I want to give back those opportunities by teaching others who may benefit.</p>
+      <p>I know this one is not purely technical, but it means a lot to me. I started to learn coding by myself, and that path led to building real apps, programming a robot, representing Madagascar on the global stage, 
+        and earning scholarships to study in the US.
+        I want to give back those opportunities by teaching others 
+        who may need it.</p>
+        <p>
+          
+          <a href="https://www.fromandformada.com/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="beta-link">
+             See what we did!
+          </a>
     </div>
     <div class="modal-extra">
       <div class="modal-item">
         <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
-        <span>200+ people impacted, 5 volunteers trained.</span>
+        <span>200+ people trained, 3 schools impacted, 5 volunteers trained</span>
       </div>
       <div class="modal-item">
         <img src="icons/code.png" alt="Code icon" class="modal-icon">
@@ -198,7 +228,7 @@
   <div class="modal-content reveal">
     <button class="modal-close" aria-label="Close">&times;</button>
     <h3>Datanz</h3>
-    <img src="icons/datanz.png" alt="Datanz dashboard" class="modal-image">
+    <img src="/assets/datanz.png" alt="Datanz dashboard" class="modal-image">
     <div class="modal-body">
       <p>As part of our Software Engineering capstone, our team of four was tasked with building a tool to help monitor and improve healthcare facility access in Tanzania.</p>
       <p>The goal: create a website that local government districts can use to track, assess, and visualize healthcare data, all in a simple, accessible way. I took the lead on project coordination and technical backend, including:</p>
@@ -210,6 +240,9 @@
         <li>Ensuring the system can generate insights like average wait times and client satisfaction scores</li>
         <li>Building user‑friendly filters so patients can explore and access reports easily</li>
       </ul>
+      <p>
+
+      </p>
     </div>
     <div class="modal-extra">
       <div class="modal-item">
