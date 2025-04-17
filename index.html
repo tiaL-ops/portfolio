@@ -4,9 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Landy Rakotoarison Portfolio</title>
-
-
-  <!-- Your main stylesheet -->
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -20,6 +17,7 @@
     <a href="#goals">Goals</a>
   </nav>
 
+  <!-- ABOUT -->
   <section id="about">
     <div class="left">
       <figure id="picLandy">
@@ -30,15 +28,10 @@
         </figcaption>
       </figure>
     </div>
-
     <div class="right">
       <div class="social-icons">
-        <a href="#" aria-label="GitHub">
-          <img src="icons/github.png" alt="GitHub icon">
-        </a>
-        <a href="#" aria-label="LinkedIn">
-          <img src="icons/linkedin.png" alt="LinkedIn icon">
-        </a>
+        <a href="#"><img src="icons/github.png" alt="GitHub icon"></a>
+        <a href="#"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
       </div>
       <div class="role-item">FULL STACK DEVELOPER</div>
       <div class="role-item">AI RESEARCHER</div>
@@ -46,11 +39,11 @@
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills">
     <div class="skills-left">
       <h2 class="reveal">Skills:</h2>
     </div>
-  
     <div class="skills-right">
       <div class="skills-box reveal">
         <img src="icons/coding.png" alt="Code icon" class="skills-icon">
@@ -62,7 +55,8 @@
       </div>
     </div>
   </section>
-  
+
+  <!-- EXPERIENCE -->
   <section id="experience">
     <div class="experience-left">
       <h2 class="reveal">Experiences:</h2>
@@ -76,7 +70,6 @@
         </ul>
         <div class="experience-date">May – Aug 2023</div>
       </div>
-  
       <div class="experience-box reveal">
         <h3>Teacher Assistant</h3>
         <ul>
@@ -87,7 +80,143 @@
       </div>
     </div>
   </section>
-  
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-left">
+      <h2 class="reveal">Projects:</h2>
+    </div>
+    <div class="projects-right">
+      <div class="project-card reveal" id="karoka-card">
+        <h3>Karoka</h3>
+        <p>AI‑powered 2D game that teaches Python through personalized learning styles</p>
+        <div class="project-date">Dec 2024 – Present</div>
+      </div>
+     <!-- inside your #projects grid -->
+<div class="project-card reveal" id="miningai-card">
+  <h3>Mining.AI</h3>
+  <p>Machine-learning research project focused on improving mineral extraction</p>
+  <div class="project-date">Mar 2025 – Present</div>
+</div>
+
+<div class="project-card reveal" id="ffmada-card">
+  <h3>F&amp;F Mada</h3>
+  <p>Non‑profit bootcamp that offers free Python courses</p>
+  <div class="project-date">May 2023 – Present</div>
+</div>
+
+<div class="project-card reveal" id="datanz-card">
+  <h3>Datanz</h3>
+  <p>Healthcare platform for district government in Tanzania to monitor facilities</p>
+  <div class="project-date">Jan 2025 – Present</div>
+</div>
+
+  </section>
+
+  <!-- KAROKA MODAL -->
+  <div id="karoka-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content reveal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h3>Karoka</h3>
+      <img src="icons/karoka.png" alt="Karoka screenshot" class="modal-image">
+      <div class="modal-body">
+        <p>Karoka is an adaptive 2D game that teaches Python through personalized learning styles (Visual, Auditory, Logical, Read/Write) made for students who haven’t thrived in traditional school systems.</p>
+        <p>I started this solo in December 2024... Used by 500+ beta testers so far.</p>
+        <p>I’m currently researching LLM integration for adaptive feedback—part of my senior thesis!</p>
+      </div>
+      <div class="modal-extra">
+        <div class="modal-item">
+          <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
+          <span>Beta version tested by 500, research refinement approved as thesis!</span>
+        </div>
+        <div class="modal-item">
+          <img src="icons/code.png" alt="Code icon" class="modal-icon">
+          <span>Built with Phaser.js, JS, Firebase, Python</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- MINING.AI MODAL -->
+<div id="miningai-modal" class="modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content reveal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <h3>MINING.AI</h3>
+    <img src="icons/miningai.png" alt="Open‑pit mine" class="modal-image">
+    <div class="modal-body">
+      <p>For this project, my teammate and I are exploring how AI can support the mining industry — specifically in improving mineral extraction through smarter prediction models.</p>
+      <p>(Details coming soon; we’re holding off until the Pan‑African Robotics Competition wraps!)</p>
+      <p>We’re experimenting with both standalone and hybrid models, including CNNs, Random Forests, and Transformers, to compare their performance on soil data.</p>
+    </div>
+    <div class="modal-extra">
+      <div class="modal-item">
+        <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
+        <span>Selected as a Top 30 team (out of 100+) in the PARC Competition, representing Madagascar (ongoing!)</span>
+      </div>
+      <div class="modal-item">
+        <img src="icons/code.png" alt="Code icon" class="modal-icon">
+        <span>Trained with PyTorch, scikit‑learn, Python</span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- F&F MADA MODAL -->
+<div id="ffmada-modal" class="modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content reveal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <h3>F&amp;F Mada</h3>
+    <img src="icons/ffmada.png" alt="F&amp;F Mada cohort" class="modal-image">
+    <div class="modal-body">
+      <p>I know this one is not purely technical, but it means a lot to me. I started to learn coding by myself, and that path led to building real apps, programming a robot, representing Madagascar on the global stage, and earning scholarships to study in the US. I want to give back those opportunities by teaching others who may benefit.</p>
+    </div>
+    <div class="modal-extra">
+      <div class="modal-item">
+        <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
+        <span>200+ people impacted, 5 volunteers trained.</span>
+      </div>
+      <div class="modal-item">
+        <img src="icons/code.png" alt="Code icon" class="modal-icon">
+        <span>Teaching Python &amp; mBlock</span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- DATANZ MODAL -->
+<div id="datanz-modal" class="modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content reveal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <h3>Datanz</h3>
+    <img src="icons/datanz.png" alt="Datanz dashboard" class="modal-image">
+    <div class="modal-body">
+      <p>As part of our Software Engineering capstone, our team of four was tasked with building a tool to help monitor and improve healthcare facility access in Tanzania.</p>
+      <p>The goal: create a website that local government districts can use to track, assess, and visualize healthcare data, all in a simple, accessible way. I took the lead on project coordination and technical backend, including:</p>
+      <ul>
+        <li>Task planning and weekly sprint management</li>
+        <li>Resolving Git merge conflicts and maintaining codebase stability</li>
+        <li>Designing and implementing the database to handle incoming survey data</li>
+        <li>Setting up authentication (login/signup) and structured data storage for patient & facility records</li>
+        <li>Ensuring the system can generate insights like average wait times and client satisfaction scores</li>
+        <li>Building user‑friendly filters so patients can explore and access reports easily</li>
+      </ul>
+    </div>
+    <div class="modal-extra">
+      <div class="modal-item">
+        <img src="icons/code.png" alt="Code icon" class="modal-icon">
+        <span>Building with Express, Node.js, SQL, JavaScript</span>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
 
   <script src="/scripts.js"></script>
 </body>
