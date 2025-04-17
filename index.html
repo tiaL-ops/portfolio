@@ -4,117 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Landy Rakotoarison Portfolio</title>
- 
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-p6O/n5GbcKFNvv4wiKXB8oYKM4iG4omT1+Ai+ZfqvP1xkxn5v/kffAO07Mjk5yrQtxUh0y+Bs5rsX3bpi6Uwyg=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
 
- 
-  <style>
-    body {
-      margin: 0;
-      background-color: #0a0a0a;
-      color: #fcefdc;
-      font-family: 'Inter', sans-serif;
-    }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1.5rem;
-      font-size: 1.2rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #fcefdc;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #ffcc99; }
-
-    #about {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;        /* center left/right vertically */
-      padding: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .left {
-      flex: 1;
-      min-width: 300px;
-      text-align: center;         /* center the PNG & caption */
-    }
-    #picLandy img {
-      max-width: 100%;
-      width: 800px;               /* or adjust to taste */
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    #picLandy figcaption {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      line-height: 1.4;
-    }
-    #picLandy figcaption em {
-      font-style: italic;
-    }
-
-    .right {
-      flex: 1;
-      min-width: 280px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;        
-      justify-content: center;   
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    .social-icons {
-      display: flex;
-      gap: 1.5rem;
-    }
-    .social-icons a img {
-      width: 2.2rem;           
-      height: auto;
-      display: block;
- 
-      filter: brightness(0) invert(1);
-      transition: transform 0.2s;
-    }
-    .social-icons a:hover img {
-      transform: scale(1.2);
-    }
-
-    .role-item {
-      font-weight: 700;
-      font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    .role-item::before {
-      content: "↳";
-      font-size: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      #about {
-        flex-direction: column;
-        text-align: center;
-      }
-      .right {
-        margin-top: 2rem;
-      }
-    }
-  </style>
+  <!-- Your main stylesheet -->
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
@@ -129,8 +22,7 @@
   <section id="about">
     <div class="left">
       <figure id="picLandy">
-        <img src="/assets/aboutme.png"
-             alt="Landy Rakotoarison name & portrait graphic">
+        <img src="/assets/aboutme.png" alt="Landy Rakotoarison">
         <figcaption>
           <p>Originally from Madagascar, now studying at Lafayette College (US) as a full-ride international scholar</p>
           <p><em>Computer Science, Class of 2026.</em></p>
@@ -139,7 +31,6 @@
     </div>
 
     <div class="right">
-     
       <div class="social-icons">
         <a href="#" aria-label="GitHub">
           <img src="icons/github.png" alt="GitHub icon">
@@ -148,12 +39,26 @@
           <img src="icons/linkedin.png" alt="LinkedIn icon">
         </a>
       </div>
-      
       <div class="role-item">FULL STACK DEVELOPER</div>
       <div class="role-item">AI RESEARCHER</div>
       <div class="role-item">TEACHER / MENTOR</div>
     </div>
   </section>
 
+  <section id="skills">
+    <h2 class="reveal">Skills:</h2>
+    <div class="skills">
+      <div class="skills-box reveal">
+        <img src="icons/coding.png" alt="Code icon" class="skills-icon">
+        <div class="skills-text">
+          <p><strong>Languages:</strong> Python, JavaScript (Node.js, Express), SQL, Java</p>
+          <p><strong>Frameworks &amp; Tools:</strong> Firebase, Phaser.js, BetterSQLite, REST APIs, Git, Kaggle, Tiled, Trello</p>
+          <p><strong>ML/DS Tools:</strong> Scikit‑learn, TensorFlow, Pandas, NumPy, Matplotlib, data cleaning, evaluation metrics</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/scripts.js"></script>
 </body>
 </html>
