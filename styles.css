@@ -197,3 +197,14 @@ nav {
 
 
 
+footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 2rem;
+}
+.footer-name { font-size: 1.5rem; font-weight: 700; }
+.footer-socials { display: flex; justify-content: center; gap: 1.5rem; margin: 1rem 0; }
+.footer-socials img { width: 2rem; filter: brightness(0) invert(1); transition: transform 0.2s; }
+.footer-socials img:hover { transform: scale(1.2); }
+.footer-copyright { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #b0a8ba; }
