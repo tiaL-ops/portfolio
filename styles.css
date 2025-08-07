@@ -62,7 +62,7 @@ nav {
 .skills-icon { width: 4rem; filter: brightness(0) invert(1); }
 .skills-text p, .experience-box ul { font-family: 'Inter', sans-serif; font-size: 1.1rem; }
 .experience-box h3 { font-size: 2.5rem; margin-bottom: 1rem; }
-.experience-date { text-align: center; font-size: 1.2rem; margin-top: 1rem; }
+.experience-date { text-align: center; font-size: 1rem; margin-top: 1rem; bottom: 100px;}
 
 /* ======================================
    4. Featured Projects Section
@@ -75,7 +75,23 @@ nav {
 .project-image { width: 100%; height: 220px; object-fit: cover; }
 .project-info { padding: 2rem; }
 .project-info h3 { font-size: 2rem; margin: 0 0 0.5rem 0; }
-.project-info p { font-family: 'Inter', sans-serif; line-height: 1.6; }
+.project-info p { font-family: 'Inter', sans-serif; line-height: 1.6; margin-bottom: 1.5rem; }
+.tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+.tech-tag {
+    background-color: #fcefdc;
+    border: 1px solid #0a0a0a;
+    color: #0a0a0a; /* High contrast text */
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* optional */
+}
+
+.project-card:hover .tech-tag {
+    background-color: #fcefdc; border-color: #0a0a0a; color: #0a0a0a;
+}
 
 /* ======================================
    5. Awards Timeline
@@ -92,6 +108,7 @@ nav {
 .timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; padding: 0 2.5rem; }
 .timeline-item:nth-child(odd) { padding-bottom: 3rem; margin-top: -1rem; }
 .timeline-item:nth-child(even) { padding-top: 3rem; margin-top: 1rem; }
+
 
 .timeline-date { font-family: 'Sour Gummy', sans-serif; font-size: 1.5rem; font-weight: 700; color: #ffcc99; margin-bottom: 1rem; }
 .timeline-item:nth-child(odd) .timeline-date { position: absolute; bottom: -1.5rem; }
@@ -144,7 +161,7 @@ nav {
 }
 .modal-header {
     padding-bottom: 1rem;
-    border-bottom: 2px solid #fcefdc; /* The line under the title */
+    border-bottom: 2px solid #fcefdc;
     margin-bottom: 1.5rem;
 }
 .modal-header h3 { font-size: 2.5rem; margin: 0; }
@@ -177,3 +194,6 @@ nav {
     .outside-tech-container { text-align: center; }
     .outside-tech-text p { text-align: center; }
 }
+
+
+
