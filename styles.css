@@ -1,478 +1,179 @@
 /* ======================================
-   Base & Global Styles
+   1. Base & Original Styles
    ====================================== */
-
-   html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #0a0a0a;
-    color: #fcefdc;
-    font-family: 'Sour Gummy', sans-serif;
-    box-sizing: border-box;
-  }
-  
-  *, *::before, *::after {
-    box-sizing: inherit;
-  }
-  
-  /* Link styles */
-  a {
-    text-decoration: none;
-    color: #fcefdc;
-    transition: color 0.3s;
-  }
-  a:hover {
-    color: #ffcc99;
-  }
-  
-  /* Reveal animation */
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    will-change: opacity, transform;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Page-level utility classes */
-  .beta-link {
-    display: inline-block;
-    color: #fcefdc;
-    background-color: #0a0a0a;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    font-weight: 700;
-    transition: background 0.2s ease, transform 0.2s ease;
-  }
-  .beta-link:hover {
-    background-color: #ffcc99;
-    transform: translateY(-2px);
-  }
-  
-  /* ======================================
-     Navigation
-     ====================================== */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #0a0a0a;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1.5rem;
-    font-size: 1.2rem;
-  }
-  body {
-    padding-top: 4.5rem; /* offset for fixed nav */
-  }
-  
-  /* ======================================
-     About Section
-     ====================================== */
-  #about {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem;
-    flex-wrap: wrap;
-  }
-  .left {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-  }
-  #picLandy img {
-    max-width: 100%;
-    width: 900px;
-    display: block;
-    margin: 0 auto;
-  }
-  #picLandy figcaption {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.4;
-  }
-  #picLandy figcaption em {
-    font-style: italic;
-  }
-  .right {
-    flex: 1;
-    min-width: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-  .social-icons {
-    display: flex;
-    gap: 1.5rem;
-  }
-  .social-icons a img {
-    width: 2.2rem;
-    display: block;
-    filter: brightness(0) invert(1);
-    transition: transform 0.2s;
-  }
-  .social-icons a:hover img {
-    transform: scale(1.2);
-  }
-  .graduation-icon {
-    font-size: 1.2rem;
-    vertical-align: middle;
-    margin-right: 0.4rem;
-    color: #fcefdc;
-  }
-  
-  /* Role items fade-in on load */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .right .role-item {
-    opacity: 0;
-    animation: fadeUp 0.6s ease-out forwards;
-  }
-  .right .role-item:nth-child(2) { animation-delay: 0.2s; }
-  .right .role-item:nth-child(3) { animation-delay: 0.4s; }
-  .right .role-item:nth-child(4) { animation-delay: 0.6s; }
-  .role-item {
-    font-weight: 700;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  .role-item::before {
-    content: "↳";
-    font-size: 1.5rem;
-    display: inline-block;
-  }
-  
-  /* ======================================
-     Skills Section
-     ====================================== */
-/* SKILLS two‑column wrapper */
-#skills {
-  display: flex;
-  align-items: flex-start;    /* top‑align heading & box */
-  gap: 2rem;                  /* space between columns */
-  padding: 3rem;              /* same as other sections */
-  flex-wrap: wrap;
-}
-
-/* left column: the title */
-.skills-left {
-  flex: 1;
-  min-width: 200px;
-}
-.skills-left h2 {
-  font-size: 3rem;
-  font-weight: 900;
+html, body {
   margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
   color: #fcefdc;
-}
-
-/* right column: the scrollable box */
-.skills-right {
-  flex: 2;
-  max-width: 800px;           /* match Experience/Projects */
-  width: 100%;
-  margin: 0 auto;             /* center it in the row */
-  overflow-y: auto;           /* still scrollable if you want */
-}
-
-/* the rounded “card” */
-.skills-box {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  border: 2px solid #fcefdc;
-  border-radius: 40px;
-  padding: 2rem;
-  width: 100%;
+  font-family: 'Sour Gummy', sans-serif;
   box-sizing: border-box;
-  background: transparent;
 }
+*, *::before, *::after { box-sizing: inherit; }
+a { text-decoration: none; color: #fcefdc; transition: color 0.3s; }
+a:hover { color: #ffcc99; }
+section { padding: 3rem; }
+h2 { font-size: 3rem; font-weight: 900; margin: 0; }
+strong { color: #ffcc99; }
 
-/* icon + text styling */
-.skills-icon {
-  width: 4rem;
-  filter: brightness(0) invert(1);
+/* ======================================
+   2. REVEAL ON SCROLL ANIMATION
+   ====================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  will-change: opacity, transform;
 }
-.skills-text p {
-  margin: 1rem 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ======================================
-     Experience Section
-     ====================================== */
-  #experience {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    padding: 3rem;
-    flex-wrap: wrap;
-  }
-  .experience-left {
-    flex: 1;
-    min-width: 200px;
-  }
-  .experience-left h2 {
-    font-size: 3rem;
-    font-weight: 900;
-    margin: 0;
-  }
-  .experience-right {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .experience-box {
-    border: 2px solid #fcefdc;
-    border-radius: 40px;
-    padding: 2rem;
-    text-align: left;
-  }
-  .experience-box h3 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-  .experience-box ul {
-    margin: 0 0 1.5rem 1.2rem;
-  }
-  .experience-box ul li {
-    margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-    line-height: 1.4;
-  }
-  .experience-date {
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  
-  /* ======================================
-     Projects Section
-     ====================================== */
-  #projects {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    padding: 3rem;
-    flex-wrap: wrap;
-  }
-  .projects-left {
-    flex: 1;
-    min-width: 200px;
-  }
-  .projects-left h2 {
-    font-size: 3rem;
-    font-weight: 900;
-    margin: 0;
-  }
-  .projects-right {
-    flex: 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .project-card {
-    border: 2px solid #fcefdc;
-    border-radius: 40px;
-    padding: 2rem;
-    text-align: center;
-    background: transparent;
-    transition: all 0.15s ease;
-    transform-origin: center;
-  }
-  .project-card:hover {
-    cursor: pointer;
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background: #fcefdc;
-    color: #0a0a0a;
-  }
-  .project-card h3 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-  .project-card p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+/* ======================================
+   3. Navigation, About, Skills, Experience
+   ====================================== */
+nav {
+  position: sticky; top: 0; left: 0; width: 100%;
+  background-color: #0a0a0a; z-index: 1000;
+  display: flex; justify-content: center; gap: 2rem;
+  padding: 1.5rem; font-size: 1.2rem; border-bottom: 1px solid #333;
+}
+#about { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.about-left { flex: 1.5; min-width: 300px; text-align: center; }
+#picLandy img { max-width: 100%; width: 900px; display: block; margin: 0 auto; }
+#picLandy figcaption { font-family: 'Inter', sans-serif; margin-top: 2rem; font-size: 1.1rem; line-height: 1.4; }
+.graduation-icon { font-size: 1.2rem; vertical-align: middle; margin-right: 0.4rem; }
+.about-right {
+  flex: 1; min-width: 280px; display: flex; flex-direction: column;
+  align-items: flex-start; justify-content: center; gap: 2rem; padding-left: 2rem;
+}
+.social-icons { display: flex; gap: 1.5rem; }
+.social-icons a img { width: 2.2rem; filter: brightness(0) invert(1); transition: transform 0.2s; }
+.social-icons a:hover img { transform: scale(1.2); }
+.role-item {
+  font-weight: 700; font-size: 1.1rem; display: flex; align-items: center;
+  gap: 1rem; text-transform: uppercase; letter-spacing: 2px;
+}
+.role-item::before { content: "↳"; font-size: 1.5rem; display: inline-block; }
+#skills, #experience { display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+.skills-left, .experience-left { flex: 1; min-width: 200px; }
+.skills-right, .experience-right { flex: 2; max-width: 800px; width: 100%; margin: 0 auto; }
+.experience-right { display: flex; flex-direction: column; gap: 2.5rem; }
+.skills-box, .experience-box { border: 2px solid #fcefdc; border-radius: 40px; padding: 2rem; }
+.skills-box { display: flex; align-items: center; gap: 2.5rem; }
+.skills-icon { width: 4rem; filter: brightness(0) invert(1); }
+.skills-text p, .experience-box ul { font-family: 'Inter', sans-serif; font-size: 1.1rem; }
+.experience-box h3 { font-size: 2.5rem; margin-bottom: 1rem; }
+.experience-date { text-align: center; font-size: 1.2rem; margin-top: 1rem; }
+
+/* ======================================
+   4. Featured Projects Section
+   ====================================== */
+#projects { text-align: center; }
+#projects h2 { text-align: center; width: 100%; margin-bottom: 3rem; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+.project-card { border: 2px solid #fcefdc; border-radius: 40px; overflow: hidden; cursor: pointer; transition: all 0.3s ease; }
+.project-card:hover { transform: translateY(-10px); background: #fcefdc; color: #0a0a0a; }
+.project-image { width: 100%; height: 220px; object-fit: cover; }
+.project-info { padding: 2rem; }
+.project-info h3 { font-size: 2rem; margin: 0 0 0.5rem 0; }
+.project-info p { font-family: 'Inter', sans-serif; line-height: 1.6; }
+
+/* ======================================
+   5. Awards Timeline
+   ====================================== */
+#awards { display: flex; flex-direction: column; align-items: center; padding-bottom: 5rem; }
+.awards-header { text-align: center; margin-bottom: 3rem; }
+.awards-header p { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #b0a8ba; }
+.awards-timeline { width: 100%; overflow-x: auto; padding: 2rem 0; scrollbar-width: thin; scrollbar-color: #fcefdc #0a0a0a; }
+.awards-timeline::-webkit-scrollbar { height: 8px; }
+.awards-timeline::-webkit-scrollbar-track { background: #0a0a0a; }
+.awards-timeline::-webkit-scrollbar-thumb { background-color: #fcefdc; border-radius: 20px; border: 2px solid #0a0a0a; }
+.timeline-items { display: flex; position: relative; padding: 1rem 0; width: max-content; }
+.timeline-line { position: absolute; top: 50%; left: 0; width: 100%; height: 2px; background-color: #333; transform: translateY(-50%); }
+.timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; padding: 0 2.5rem; }
+.timeline-item:nth-child(odd) { padding-bottom: 3rem; margin-top: -1rem; }
+.timeline-item:nth-child(even) { padding-top: 3rem; margin-top: 1rem; }
+
+.timeline-date { font-family: 'Sour Gummy', sans-serif; font-size: 1.5rem; font-weight: 700; color: #ffcc99; margin-bottom: 1rem; }
+.timeline-item:nth-child(odd) .timeline-date { position: absolute; bottom: -1.5rem; }
+.timeline-item:nth-child(even) .timeline-date { position: absolute; top: -1.5rem; }
+.timeline-content {
+    background-color: #1c1c2e; border: 1px solid #333; border-radius: 15px; padding: 1.5rem;
+    width: 250px; text-align: center; transition: transform 0.3s ease;
+}
+.timeline-content:hover { transform: translateY(-5px); border-color: #ffcc99; }
+.timeline-content h3 { font-family: 'Sour Gummy', sans-serif; font-size: 1.2rem; margin: 0 0 0.5rem 0; }
+.timeline-content p { font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.5; margin: 0; }
+
+/* ======================================
+   6. Outside-Tech & Contact
+   ====================================== */
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header h2 { text-align: center; width: 100%; }
+.outside-tech-container { display: flex; align-items: center; justify-content: center; gap: 3rem; max-width: 900px; margin: 0 auto; flex-wrap: wrap; }
+.outside-tech-text { flex: 1; min-width: 300px; }
+.outside-tech-text p { font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.8; text-align: left; }
+.outside-tech-image { flex: 0 1 300px; }
+.outside-tech-image img { width: 100%; height: auto; display: block; }
+#contact { text-align: center; padding: 5rem 0; }
+.contact-message { font-family: 'Inter', sans-serif; max-width: 600px; margin: 0 auto 2rem; line-height: 1.7; font-size: 1.1rem; }
+.contact-button {
+    display: inline-block; background: #fcefdc; color: #0a0a0a;
+    font-family: 'Sour Gummy', sans-serif; font-size: 1.2rem; font-weight: 700;
+    padding: 0.8rem 2.5rem; border-radius: 50px; text-decoration: none; transition: transform 0.3s ease;
+}
+.contact-button:hover { transform: scale(1.05); }
+.social-icons-contact { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
+.social-icons-contact img { width: 2.2rem; filter: brightness(0) invert(1); transition: transform 0.2s; }
+.social-icons-contact img:hover { transform: scale(1.2); }
+
+/* ======================================
+   7. FINAL Modal Styles
+   ====================================== */
+.modal {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px); z-index: 2000; align-items: center; justify-content: center; padding: 2rem;
+}
+.modal.show { display: flex; }
+.modal-content {
+    background: #1c1c2e; border: 2px solid #fcefdc; border-radius: 40px; max-width: 900px;
+    width: 95%; padding: 2.5rem; position: relative; text-align: left;
+}
+.modal-close {
+    position: absolute; top: 1rem; right: 1.5rem; font-size: 2.5rem;
+    background: none; border: none; color: #fcefdc; cursor: pointer;
+}
+.modal-header {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #fcefdc; /* The line under the title */
     margin-bottom: 1.5rem;
-  }
-  .project-date {
-    font-size: 1.2rem;
-  }
-  
-  /* ======================================
-     Awards Section
-     ====================================== */
-  #awards {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    padding: 3rem;
-    flex-wrap: wrap;
-  }
-  .awards-left {
-    flex: 1;
-    min-width: 200px;
-  }
-  .awards-left h2 {
-    font-size: 3rem;
-    font-weight: 900;
-    margin: 0;
-  }
-  .awards-right {
-    flex: 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .award-card {
-    border: 2px solid #fcefdc;
-    border-radius: 40px;
-    padding: 2rem;
-    text-align: center;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  }
-  .award-card:hover {
-    background: #fcefdc;
-    color: #0a0a0a;
-    transform: translateY(-5px);
-  }
-  .award-card .award-icon {
-    font-family: 'Material Icons';
-    font-size: 2.5rem;
-    display: block;
-    margin: 0 auto 1rem;
-  }
-  .award-card h3 {
-    font-size: 1.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 0.8rem;
-  }
-  .award-card p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-  
-  /* ======================================
-     Modal Styles
-     ====================================== */
-  .modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-  .modal.show {
-    display: flex;
-  }
-  .modal-content {
-    background: #0a0a0a;
-    border: 2px solid #fcefdc;
-    border-radius: 40px;
-    max-width: 900px;
-    width: 100%;
-    padding: 2rem;
-    position: relative;
-    text-align: left;
-  }
-  .modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #fcefdc;
-    cursor: pointer;
-  }
-  .modal-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin: 1rem 0;
-  }
-  .modal-body p {
-    margin: 0.8rem 0;
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-  .modal-extra {
-    background-color: #fcefdc;
-    color: #0a0a0a;
-    padding: 1rem 1.5rem;
-    border-radius: 20px;
-    margin-top: 1rem;
-  }
-  .modal-item {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-  .modal-icon {
-    width: 1.5rem;
-    height: auto;
-  }
-  
-  /* ======================================
-     Responsive Adjustments
-     ====================================== */
-  @media (max-width: 768px) {
-    #about,
-    #skills,
-    #experience,
-    #projects,
-    #awards {
-      flex-direction: column;
-      text-align: center;
-    }
-    .skills-right,
-    .projects-right {
-      max-width: none;
-    }
-    .skills-box,
-    .project-card,
-    .experience-box,
-    .award-card {
-      margin: 1rem auto;
-    }
-    .skills-box,
-    .modal-content {
-      width: 90%;
-    }
-  }
-  
+}
+.modal-header h3 { font-size: 2.5rem; margin: 0; }
+.modal-body { display: flex; gap: 2rem; }
+.modal-image-container { flex: 0 0 40%; }
+.modal-image { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; max-height: 500px; }
+.modal-text-container {
+    flex: 1; max-height: 65vh; overflow-y: auto; padding-right: 1rem;
+    scrollbar-width: thin; scrollbar-color: #fcefdc #1c1c2e;
+}
+.modal-text-container::-webkit-scrollbar { width: 8px; }
+.modal-text-container::-webkit-scrollbar-track { background: #1c1c2e; }
+.modal-text-container::-webkit-scrollbar-thumb { background-color: #fcefdc; border-radius: 20px; }
+.modal-text-container h4 { font-size: 1.5rem; margin-top: 1rem; margin-bottom: 0.5rem; color: #ffcc99; }
+.modal-text-container h4:first-child { margin-top: 0; }
+.modal-text-container p, .modal-text-container ul { font-family: 'Inter', sans-serif; line-height: 1.7; }
+.modal-text-container ul { padding-left: 20px; margin-bottom: 1rem; }
+
+/* ======================================
+   8. Responsive Adjustments
+   ====================================== */
+@media (max-width: 850px) {
+    .modal-body { flex-direction: column; }
+    .modal-text-container { max-height: none; overflow-y: visible; padding-right: 0; }
+}
+@media (max-width: 768px) {
+    #about, #skills, #experience, #awards { flex-direction: column; text-align: center; }
+    .about-right { align-items: center; padding-left: 0; }
+    .skills-left, .experience-left, .awards-left { text-align: center; width: 100%; }
+    .outside-tech-container { text-align: center; }
+    .outside-tech-text p { text-align: center; }
+}

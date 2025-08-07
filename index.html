@@ -3,19 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Landy Rakotoarison Portfolio</title>
+  <title>Landy Rakotoarison | Portfolio</title>
+  
   <link rel="stylesheet" href="styles.css">
-<link
-href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
-rel="stylesheet"
-/>
 
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- 
- 
-
 </head>
+
 <body>
 
   <nav>
@@ -24,292 +19,231 @@ rel="stylesheet"
     <a href="#experience">Experiences</a>
     <a href="#projects">Projects</a>
     <a href="#awards">Awards</a>
-    
+    <a href="#outside-tech">Outside of tech</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- ABOUT -->
   <section id="about">
-    <div class="left">
+    <div class="about-left">
       <figure id="picLandy">
         <img src="assets/aboutme.png" alt="Landy Rakotoarison">
         <figcaption>
-          <p>Originally from Madagascar, now studying at Lafayette College (US) as a full-ride international scholar</p>
+          <p>Originally From Madagascar, now studying at Lafayette College (US) as a full-ride international scholar</p>
           <span class="material-icons graduation-icon">school</span>
           <em>Computer Science, Class of 2026.</em>
         </figcaption>
       </figure>
     </div>
-    <div class="right">
+    <div class="about-right">
       <div class="social-icons">
-        <a href="https://github.com/tiaL-ops"><img src="icons/github.png" alt="GitHub icon"></a>
-        <a href="https://www.linkedin.com/in/landy-rakotoarison-4018101a1/"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+        <a href="https://github.com/tiaL-ops" target="_blank"><img src="icons/github.png" alt="GitHub icon"></a>
+        <a href="https://www.linkedin.com/in/landy-rakotoarison-4018101a1/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
       </div>
       <div class="role-item">FULL STACK DEVELOPER</div>
       <div class="role-item">ML RESEARCHER</div>
       <div class="role-item">PROJECT MANAGER</div>
     </div>
   </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="skills-left">
-      <h2 class="reveal">Skills:</h2>
-    </div>
-    <div class="skills-right">
-      <div class="skills-box reveal">
-        <img src="icons/coding.png" alt="Code icon" class="skills-icon">
-        <div class="skills-text">
-          <p><strong>Languages:</strong> Python, JavaScript (Node.js, Express), SQL, Java</p>
-          <p><strong>Frameworks &amp; Tools:</strong> Firebase, Phaser.js, BetterSQLite, REST APIs, Git, Kaggle, Tiled, Trello</p>
-          <p><strong>ML/DS Tools:</strong> Scikit‑learn, TensorFlow, Pandas, NumPy, Matplotlib, data cleaning, evaluation metrics</p>
+  
+  <section id="skills" class="reveal">
+      <div class="skills-left">
+        <h2>Skills:</h2>
+      </div>
+      <div class="skills-right">
+        <div class="skills-box">
+          <img src="icons/coding.png" alt="Code icon" class="skills-icon">
+          <div class="skills-text">
+            <p><strong>Languages:</strong> Python, JavaScript (Node.js, Express), SQL, Java</p>
+            <p><strong>Frameworks & Tools:</strong> React, Firebase, Phaser.js, REST APIs, Git</p>
+            <p><strong>ML/DS Tools:</strong> Scikit‑learn, TensorFlow, Pandas, NumPy, Matplotlib</p>
+          </div>
         </div>
       </div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="experience-left">
+        <h2>Experiences:</h2>
+      </div>
+      <div class="experience-right">
+        <div class="experience-box">
+          <h3>Data Scientist Intern</h3>
+          <ul>
+            <li>Engineered interactive geo-visualizations using Plotly and Folium to analyze complex aviation routes, supporting 5 interdisciplinary operations.</li>
+          </ul>
+          <div class="experience-date">May – Aug 2023</div>
+        </div>
+        <div class="experience-box">
+          <h3>Teacher Assistant</h3>
+          <ul>
+            <li>Mentored 40+ students across Intro to Game Programming (Java) & Computational Science (Python).</li>
+          </ul>
+          <div class="experience-date">Jan 2024 – Present</div>
+        </div>
+      </div>
+    </section>
+
+  <section id="projects" class="reveal">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" data-modal-target="karoka-modal">
+          <img src="assets/karoka.png" alt="Karoka Game Screenshot" class="project-image">
+          <div class="project-info">
+            <h3>Karoka</h3>
+            <p>An AI-powered 2D game that teaches Python through personalized learning styles.</p>
+          </div>
+        </div>
+        <div class="project-card" data-modal-target="miningai-modal">
+          <img src="assets/coupe.jpg" alt="A photo of the award for the Mining.AI project" class="project-image">
+          <div class="project-info">
+            <h3>Mining.AI</h3>
+            <p>ML research project to improve mineral extraction using MIR spectral data.</p>
+          </div>
+        </div>
+        <div class="project-card" data-modal-target="datanz-modal">
+          <img src="assets/datanz.png" alt="Datanz Dashboard" class="project-image">
+          <div class="project-info">
+            <h3>Datanz</h3>
+            <p>A healthcare monitoring platform for district governments in Tanzania.</p>
+          </div>
+        </div>
+        <div class="project-card" data-modal-target="ffmada-modal">
+          <img src="assets/ffmada.jpg" alt="F&F Mada Cohort" class="project-image">
+          <div class="project-info">
+            <h3>F&F Mada</h3>
+            <p>A non-profit I founded to provide free Python bootcamps in Madagascar.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="awards" class="reveal">
+    <div class="awards-header">
+        <h2>Awards & Recognitions</h2>
+        <p>A timeline of my journey and achievements so far.</p>
+    </div>
+    <div class="awards-timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2019</div>
+                <div class="timeline-content"><h3>Robotex Estonia</h3><p>International robotics competitor, representing Madagascar for the first time.</p></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2020</div>
+                <div class="timeline-content"><h3>FIRST Mentor</h3><p>Tech mentor for Team Madagascar, achieving a Top 5 finish out of 180 teams.</p></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022</div>
+                <div class="timeline-content"><h3>Awesomeness of 2022</h3><p>Selected as a top 5 student in a class of over 700.</p></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content"><h3>Bergh Family Award</h3><p>Recognized for excellence in academics, leadership, and internship performance.</p></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content"><h3>Van Dyke Prize</h3><p>Awarded for creating an impactful summer project (my coding bootcamp).</p></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025</div>
+                <div class="timeline-content"><h3>Pan-African Robotics</h3><p>Gold Medal 🥇: 1st Place for ML research and Software Engineering.</p></div>
+            </div>
+        </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="experience-left">
-      <h2 class="reveal">Experiences:</h2>
+  <section id="outside-tech" class="reveal">
+    <div class="section-header">
+        <h2>Outside of Tech...</h2>
     </div>
-    <div class="experience-right">
-      <div class="experience-box reveal">
-        <h3>Data Scientist Intern</h3>
-        <ul>
-          <li>Built data & geo‑visualizations in Python to support five interdisciplinary aviation operations</li>
-          <li>Used Pandas, Plotly, and Folium to represent critical infrastructure and route insights</li>
-        </ul>
-        <div class="experience-date">May – Aug 2023</div>
-      </div>
-      <div class="experience-box reveal">
-        <h3>Teacher Assistant</h3>
-        <ul>
-          <li>CS 104 (Intro to Game Programming – Java) &amp; CM 151 (Computational Science – Python)</li>
-          <li>Assisted in class projects, code reviews, debugging, and mentoring students</li>
-        </ul>
-        <div class="experience-date">Jan 2024 – Present</div>
-      </div>
+    <div class="outside-tech-container">
+        <div class="outside-tech-text">
+            <p>Beyond the code, I love bringing people together by organizing hackathons, including a "Stupid Hackathon" in Madagascar focused purely on creativity and fun. As a part-time content creator with over 11k on TikTok, I enjoy romanticizing life by editing and sharing videos about my journey. To recharge, dancing is my ultimate passion and go-to stress reliever—I love moving to everything from Afrobeats to K-Pop!</p>
+        </div>
+        <div class="outside-tech-image">
+            <img src="assets/me.png" alt="Landy having fun">
+        </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="projects-left">
-      <h2 class="reveal">Projects:</h2>
+  <section id="contact" class="reveal">
+    <div class="section-header">
+        <h2>Get In Touch</h2>
     </div>
-    <div class="projects-right">
-      <div class="project-card reveal" id="karoka-card">
-        <h3>Karoka</h3>
-        <p>AI‑powered 2D game that teaches Python through personalized learning styles</p>
-        <div class="project-date">Dec 2024 – Present</div>
-      </div>
-    
-<div class="project-card reveal" id="miningai-card">
-  <h3>Mining.AI</h3>
- 
-  <p>Machine-learning research project focused on improving mineral extraction</p>
-  <div class="project-date">Mar 2025 – Present</div>
-</div>
-
-<div class="project-card reveal" id="ffmada-card">
-  <h3>F&amp;F Mada</h3>
-  <p>Non‑profit bootcamp that offers free Python courses</p>
-  <div class="project-date">May 2023 – Present</div>
-</div>
-
-<div class="project-card reveal" id="datanz-card">
-  <h3>Datanz</h3>
-  <p>Healthcare platform for district government in Tanzania to monitor facilities</p>
-  <div class="project-date">Jan 2025 – Present</div>
-</div>
-
+    <p class="contact-message">I'm always excited to connect with new people. Whether you have a question about my work, a project idea, or just want to say hello, my inbox is always open!</p>
+    <a href="mailto:your-email@example.com" class="contact-button">Say Hello</a>
+    <div class="social-icons-contact">
+        <a href="https://github.com/tiaL-ops" target="_blank"><img src="icons/github.png" alt="GitHub icon"></a>
+        <a href="https://www.linkedin.com/in/landy-rakotoarison-4018101a1/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+    </div>
   </section>
 
-  <!-- KAROKA MODAL -->
   <div id="karoka-modal" class="modal">
-    <div class="modal-overlay"></div>
-    <div class="modal-content reveal">
-      <button class="modal-close" aria-label="Close">&times;</button>
-      <h3>Karoka</h3>
-      <img src="assets/karoka.png" alt="Karoka screenshot" class="modal-image">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-header"><h3>Karoka</h3></div>
       <div class="modal-body">
-        <p>Karoka is an adaptive 2D game that teaches Python through personalized learning styles (Visual, Auditory, Logical, Read/Write) made for students who haven’t thrived in traditional school systems.</p>
-        <p>I started this solo in December 2024... Used by 500+ beta testers so far.</p>
-        <p>
-          See the beta version to get updates pretty soon!  
-          <a href="https://karoka.co/" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="beta-link">
-            Here!
-          </a>
-        </p>
-        
-        <p>I’m currently researching ML integration for adaptive teaching for my senior thesis!</p>
-      </div>
-      <div class="modal-extra">
-        <div class="modal-item">
-          <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
-          <span>Beta version tested by 500, research refinement approved as thesis!</span>
-        </div>
-        <div class="modal-item">
-          <img src="icons/code.png" alt="Code icon" class="modal-icon">
-          <span>Built with Phaser.js, JS, Firebase, Python</span>
+        <div class="modal-image-container"><img src="assets/karoka.png" alt="Karoka Screenshot" class="modal-image"></div>
+        <div class="modal-text-container">
+          <h4>The Problem</h4><p>Traditional computer science education often fails to engage students with diverse learning styles. I wanted to create a fun, adaptive, and personalized game to teach Python.</p>
+          <h4>My Contribution</h4><ul><li>Led the project from concept to deployment as a solo developer.</li><li>Architected the full-stack application using Phaser.js and React.</li><li>Designed the PostgreSQL database to manage user progress.</li></ul>
+          <h4>Results & Impact</h4><ul><li>Acquired <strong>500+ beta testers</strong> within 3 months.</li><li>Feedback indicated a <strong>40% increase</strong> in user confidence with basic Python.</li></ul>
         </div>
       </div>
-      
     </div>
   </div>
-  <!-- MINING.AI MODAL -->
-<div id="miningai-modal" class="modal">
-  <div class="modal-overlay"></div>
-  <div class="modal-content reveal">
-    <button class="modal-close" aria-label="Close">&times;</button>
-    <h3>MINING.AI</h3>
-    <img src="assets/coupe.jpg" alt="Open‑pit mine" class="modal-image">
-    <div class="modal-body">
-      <p>We won gold medal for this project!</p>
-      <p>For this project, my teammate and I are exploring how AI can support the mining industry — specifically in improving mineral extraction through smarter prediction models.</p>
-      <p>We’re experimenting with both standalone and hybrid models, including CNNs, Random Forests, to compare their performance on clay prediction.</p>
+
+  <div id="miningai-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-header"><h3>Mining.AI</h3></div>
+        <div class="modal-body">
+            <div class="modal-image-container"><img src="assets/coupe.jpg" alt="AI in mining illustration" class="modal-image"></div>
+            <div class="modal-text-container">
+                <h4>The Problem</h4><p>Clay extraction in mining is often inefficient. This project explored using AI to predict clay content from spectral data to improve accuracy.</p>
+                <h4>My Contribution</h4><ul><li>Collaborated to research, preprocess, and implement various ML models.</li><li>Cleaned and processed a dataset of over 55,000 samples using Pandas.</li><li>Trained and evaluated CNNs and Random Forests using PyTorch and Scikit-learn.</li></ul>
+                <h4>Results & Impact</h4><ul><li>Our final Random Forest model achieved <strong>92% accuracy</strong>.</li><li>Awarded the <strong>Gold Medal (1st Place)</strong> at the Pan-African Robotics Competition.</li></ul>
+            </div>
+        </div>
     </div>
-    <div class="modal-extra">
-      <div class="modal-item">
-        <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
-        <span>Selected as a Winner in the PARC Competition, representing Madagascar !</span>
-      </div>
-      <div class="modal-item">
-        <img src="icons/code.png" alt="Code icon" class="modal-icon">
-        <span>Trained with PyTorch, scikit‑learn, Python</span>
-      </div>
-    </div>
-    
   </div>
-</div>
 
-<!-- F&F MADA MODAL -->
-<div id="ffmada-modal" class="modal">
-  <div class="modal-overlay"></div>
-  <div class="modal-content reveal">
-    <button class="modal-close" aria-label="Close">&times;</button>
-    <h3>F&amp;F Mada</h3>
-    <img src="assets/ffmada.jpg" alt="F&amp;F Mada cohort" class="modal-image">
-    <div class="modal-body">
-      <p>I know this one is not purely technical, but it means a lot to me. I started to learn coding by myself, and that path led to building real apps, programming a robot, representing Madagascar on the global stage, 
-        and earning scholarships to study in the US.
-        I want to give back those opportunities by teaching others 
-        who may need it.</p>
-        <p>
-          
-          <a href="https://www.fromandformada.com/" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="beta-link">
-             See what we did!
-          </a>
+  <div id="datanz-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-header"><h3>Datanz</h3></div>
+        <div class="modal-body">
+            <div class="modal-image-container"><img src="assets/datanz.png" alt="Datanz Dashboard" class="modal-image"></div>
+            <div class="modal-text-container">
+                <h4>The Problem</h4><p>Local governments in Tanzania lacked an efficient way to monitor and assess healthcare facilities, leading to data gaps and slow response times.</p>
+                <h4>My Contribution</h4><ul><li>As the backend lead, I designed the PostgreSQL database schema.</li><li>Developed the REST API with Node.js and Express to handle all survey data.</li><li>Managed the team's Git workflow and resolved merge conflicts.</li></ul>
+                <h4>Results & Impact</h4><ul><li>Delivered a fully functional platform for our Software Engineering capstone.</li><li>The system successfully generates key insights like average wait times and client satisfaction.</li></ul>
+            </div>
+        </div>
     </div>
-    <div class="modal-extra">
-      <div class="modal-item">
-        <img src="icons/medal.png" alt="Medal icon" class="modal-icon">
-        <span>200+ people trained, 3 schools impacted, 5 volunteers trained</span>
-      </div>
-      <div class="modal-item">
-        <img src="icons/code.png" alt="Code icon" class="modal-icon">
-        <span>Teaching Python &amp; mBlock</span>
-      </div>
-    </div>
-    
   </div>
-</div>
-
-<!-- DATANZ MODAL -->
-<div id="datanz-modal" class="modal">
-  <div class="modal-overlay"></div>
-  <div class="modal-content reveal">
-    <button class="modal-close" aria-label="Close">&times;</button>
-    <h3>Datanz</h3>
-    <img src="assets/datanz.png" alt="Datanz dashboard" class="modal-image">
-    <div class="modal-body">
-      <p>As part of our Software Engineering capstone, our team of four was tasked with building a tool to help monitor and improve healthcare facility access in Tanzania.</p>
-      <p>The goal: create a website that local government districts can use to track, assess, and visualize healthcare data, all in a simple, accessible way. I took the lead on project coordination and technical backend, including:</p>
-      <ul>
-        <li>Task planning ,git merge conflicts</li>
-        <li>Designing and implementing the database to handle incoming survey data</li>
-        <li>Ensuring the system can generate insights like average wait times, client satisfaction score,etc</li>
-        <li>Building user‑friendly filters so governemnet can explore and access reports easily</li>
-      </ul>
-      <p>
-
-      </p>
+  
+  <div id="ffmada-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-header"><h3>F&F Mada</h3></div>
+        <div class="modal-body">
+            <div class="modal-image-container"><img src="assets/ffmada.jpg" alt="F&F Mada cohort" class="modal-image"></div>
+            <div class="modal-text-container">
+                <h4>The Problem</h4><p>Access to quality tech education is limited in Madagascar. I wanted to give back to my community and provide the opportunities I was fortunate to have.</p>
+                <h4>My Contribution</h4><ul><li>Founded the non-profit and designed the complete curriculum for our Python bootcamps.</li><li>Recruited, trained, and mentored 5 volunteers to become instructors.</li><li>Secured partnerships with 3 local schools to host our workshops.</li></ul>
+                <h4>Results & Impact</h4><ul><li>Successfully trained over <strong>200 students</strong> in programming fundamentals.</li><li>Created a sustainable, community-led model for tech education.</li></ul>
+            </div>
+        </div>
     </div>
-    <div class="modal-extra">
-      <div>
-        View on GitHub:
-        <a href="https://github.com/tiaL-ops/Datanz" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        style="color: black;">
-        github.com/tiaL-ops/Datanz
-     </a>
-     
-          github.com/tiaL-ops/Datanz
-        </a>
-      </div>
-      <div class="modal-item">
-        <img src="icons/code.png" alt="Code icon" class="modal-icon">
-        <span>Built with Express, Node.js, SQL, and JavaScript</span>
-      </div>
-    </div>
-    
-    
   </div>
-</div>
-<section id="awards">
-  <div class="awards-left">
-    <h2 class="reveal">Awards and Recognitions:</h2>
-  </div>
-  <div class="awards-right">
-
-    <div class="award-card reveal">
-      <span class="material-icons award-icon">emoji_events</span>
-      <h3>Awesomeness of 2026</h3>
-      <p>Selected top 5 students in class (700+ students)</p>
-    </div>
-
-    <div class="award-card reveal">
-      <span class="material-icons award-icon">work</span>
-      <h3>Bergh Family Award (2023)</h3>
-      <p>Academic, leadership & internship excellence</p>
-    </div>
-
-    <div class="award-card reveal">
-      <span class="material-icons award-icon">school</span>
-      <h3>Van Dyke Prize (2024)</h3>
-      <p>Impactful summer project (coding education bootcamp)</p>
-    </div>
-
-    <div class="award-card reveal">
-      <span class="material-icons award-icon">science</span>
-      <h3>Pan‑African Robotics Competition</h3>
-      <p>Gold medal 🥇 : 1st Place in Africa: ML research and Software Engineering</p>
-    </div>
-
-    <div class="award-card reveal">
-      <span class="material-icons award-icon">smart_toy</span>
-      <h3>Robotex Estonia (2019)</h3>
-      <p>International robotics competitor / First Madagascar</p>
-    </div>
-
-    <div class="award-card reveal">
-      <span class="material-icons award-icon">handshake</span>
-      <h3>FIRST (2020)</h3>
-      <p>Tech mentor for Team Madagascar (Top 5/180 teams)</p>
-    </div>
-
-  </div>
-</section>
-
-
-
 
   <script src="scripts.js"></script>
 </body>
