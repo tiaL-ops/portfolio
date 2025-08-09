@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Landy Rakotoarison | Portfolio</title>
+  <!-- SEO & Title Update: Immediately identifies you as an engineer -->
+  <title>Landy Rakotoarison | Software & ML Engineer</title>
   
   <link rel="stylesheet" href="styles.css">
 
@@ -13,14 +14,12 @@
 
 <body>
 
+  <!-- Navigation is concise and leads to the most important sections -->
   <nav>
-    <a href="#about">Me!</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experiences</a>
-    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects & Experience</a>
     <a href="#awards">Awards</a>
-
-    
+    <a href="#skills">Skills</a>
   </nav>
 
   <section id="about">
@@ -28,23 +27,109 @@
       <figure id="picLandy">
         <img src="assets/aboutme.png" alt="Landy Rakotoarison">
         <figcaption>
-          <p>Originally From Madagascar, now studying at Lafayette College (US) as a full-ride international scholar</p>
+          <p>From Madagascar, studying at Lafayette College (US) as a full-ride international scholar.</p>
           <span class="material-icons graduation-icon">school</span>
-          <em>Computer Science, Class of 2026.</em>
+          <em>Computer Science, B.A. | Expected May 2026 | GPA: 3.82</em>
         </figcaption>
       </figure>
     </div>
     <div class="about-right">
       <div class="social-icons">
-        <a href="https://github.com/tiaL-ops" target="_blank"><img src="icons/github.png" alt="GitHub icon"></a>
-        <a href="https://www.linkedin.com/in/landy-rakotoarison-4018101a1/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn icon"></a>
+        <a href="https://github.com/tiaL-ops" target="_blank"><img src="https://placehold.co/40x40/ffffff/000000?text=GH" alt="GitHub icon" style="filter: invert(1);"></a>
+        <a href="https://www.linkedin.com/in/landy-rakotoarison-4018101a1/" target="_blank"><img src="https://placehold.co/40x40/ffffff/000000?text=IN" alt="LinkedIn icon" style="filter: invert(1);"></a>
       </div>
-      <div class="role-item">FULL STACK DEVELOPER</div>
-      <div class="role-item">ML RESEARCHER</div>
-      <div class="role-item">PROJECT MANAGER</div>
+      <!-- Roles updated to reflect engineer & builder identity -->
+      <div class="role-item">SOFTWARE ENGINEER</div>
+      <div class="role-item">MACHINE LEARNING RESEARCHER</div>
+      <div class="role-item">COMMUNITY BUILDER</div>
     </div>
   </section>
   
+  <!-- The "Projects & Experience" section is now the core of the portfolio -->
+  <section id="projects" class="reveal">
+      <h2>Projects & Experience</h2>
+      <div class="project-grid">
+        <!-- Project Order: Most recent and impressive work first -->
+        <div class="project-card" data-modal-target="miningai-modal">
+          <img src="assets/coupe.jpg" alt="Award for the Mining.AI project" class="project-image">
+          <div class="project-info">
+            <h3>Machine Learning Research</h3>
+            <p>End-to-end AI solution to predict clay mineral content from 55k+ spectral samples.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">PyTorch</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">SHAP</span><span class="tech-tag">StreamLit</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-modal-target="karoka-modal">
+          <img src="assets/karoka.png" alt="Karoka Game Screenshot" class="project-image">
+          <div class="project-info">
+            <h3>Karoka: AI EdTech Game</h3>
+            <p>AI-powered 2D game that teaches Python through personalized learning paths.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Phaser.js</span><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">GPT</span><span class="tech-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-modal-target="datanz-modal">
+          <img src="assets/datanz.png" alt="Datanz Dashboard" class="project-image">
+          <div class="project-info">
+            <h3>Datanz: Healthcare Platform</h3>
+            <p>Full-stack web app to visualize and analyze access to 13k+ healthcare facilities.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span class="tech-tag">SQL</span><span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <!-- ASECNA Internship added to the main project flow -->
+        <div class="project-card" data-modal-target="asecna-modal">
+          <img src="https://placehold.co/600x400/1c1c2e/fcefdc?text=ASECNA" alt="ASECNA Project" class="project-image">
+          <div class="project-info">
+            <h3>Aviation Data Science</h3>
+            <p>Engineered Python pipelines to process flight telemetry data for safety analysis.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Plotly</span><span class="tech-tag">Folium</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-modal-target="ffmada-modal">
+          <img src="assets/ffmada.jpg" alt="F&F Mada Cohort" class="project-image">
+          <div class="project-info">
+            <h3>F&F Mada: Non-Profit</h3>
+            <p>Founded a non-profit providing free, community-led Python bootcamps in Madagascar.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Community</span><span class="tech-tag">Education</span><span class="tech-tag">Leadership</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-modal-target="ta-modal">
+          <img src="https://placehold.co/600x400/1c1c2e/fcefdc?text=TA" alt="Teaching Assistant" class="project-image">
+          <div class="project-info">
+            <h3>Teaching Assistant</h3>
+            <p>Mentored 40+ students in Java & Python, strengthening core programming fundamentals.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Java</span><span class="tech-tag">Python</span><span class="tech-tag">Mentorship</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Awards now consistent with the resume -->
+  <section id="awards" class="reveal">
+    <div class="awards-header">
+        <h2>Awards & Recognition</h2>
+        <p>A timeline of key achievements...</p>
+    </div>
+    <div class="awards-timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2019</div><div class="timeline-content"><h3>Robotex Estonia</h3><p>Represented Madagascar as a national champion in an international robotics competition.</p></div></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2025</div><div class="timeline-content"><h3>Pan-African Robotics</h3><p><strong>Gold Medal 🥇 (1st Place)</strong>: Winning team in the AI League for ML research and software engineering.</p></div></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2026</div><div class="timeline-content"><h3>Awesomeness of 2026</h3><p>Selected as a top 5 student in a class of over 700 for academic excellence and leadership.</p></div></div>
+        </div>
+    </div>
+  </section>
+
   <section id="skills" class="reveal">
       <div class="skills-left">
         <h2>Skills:</h2>
@@ -54,123 +139,33 @@
           <img src="icons/coding.png" alt="Code icon" class="skills-icon">
           <div class="skills-text">
             <p><strong>Languages:</strong> Python, JavaScript (Node.js, Express), SQL, Java</p>
-            <p><strong>Frameworks & Tools:</strong> React, Firebase, Phaser.js, REST APIs, Git</p>
-            <p><strong>ML/DS Tools:</strong> Scikit‑learn, TensorFlow, Pandas, NumPy, Matplotlib</p>
+            <p><strong>Frameworks & Tools:</strong> React, Firebase, Phaser.js, REST APIs, Git, Docker</p>
+            <p><strong>ML/DS Tools:</strong> PyTorch, Scikit‑learn, TensorFlow, Pandas, NumPy, Matplotlib</p>
           </div>
         </div>
       </div>
     </section>
 
- <section id="experience" class="reveal">
-  <div class="experience-left">
-    <h2>Experiences:</h2>
-  </div>
-  <div class="experience-right">
-   
-    <div class="experience-box">
-      <h3 style="text-align: center;">Teacher Assistant</h3>
-
-        <div class="experience-date">Lafayette College | Easton, ,Jan 2024 – Present</div>
-      <ul>
-        <p> I mentored 40+ students in Java & Python through weekly code reviews, to help them strengthen core programming fundamentals </p>
-      
-      </ul>
-    
-     
-    </div>
-     <div class="experience-box">
-      <h3 style="text-align: center;">Data Science Intern</h3>
-      <div class="experience-date">ASECNA (Aviation Safety) | Madagascar, May – Aug 2023</div>
-
-      <ul>
-        <p> I engineered interactive geo-visualizations using Plotly and Folium to analyze complex aviation routes.</p>
-       
-      </ul>
-      
-    </div>
-  </div>
-</section>
-  <section id="projects" class="reveal">
-      <h2>Featured Projects</h2>
-      <div class="project-grid">
-        <div class="project-card" data-modal-target="karoka-modal">
-          <img src="assets/karoka.png" alt="Karoka Game Screenshot" class="project-image">
-          <div class="project-info">
-            <h3>Karoka</h3>
-            <p>An AI-powered 2D game that teaches Python through personalized learning styles.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Phaser.js</span><span class="tech-tag">React</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Python</span><span class="tech-tag">Docker</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" data-modal-target="miningai-modal">
-          <img src="assets/coupe.jpg" alt="A photo of the award for the Mining.AI project" class="project-image">
-          <div class="project-info">
-            <h3>Mining.AI</h3>
-            <p>ML research project to improve mineral extraction using MIR spectral data.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">PyTorch</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Python</span><span class="tech-tag">StreamLit</span><span class="tech-tag">Pandas</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" data-modal-target="datanz-modal">
-          <img src="assets/datanz.png" alt="Datanz Dashboard" class="project-image">
-          <div class="project-info">
-            <h3>Datanz</h3>
-            <p>A healthcare monitoring platform for district governments in Tanzania.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span class="tech-tag">SQL</span><span class="tech-tag">Javascript</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" data-modal-target="ffmada-modal">
-          <img src="assets/ffmada.jpg" alt="F&F Mada Cohort" class="project-image">
-          <div class="project-info">
-            <h3>F&F Mada</h3>
-            <p>A non-profit I founded to provide free Python bootcamps in Madagascar.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Community</span><span class="tech-tag">Education</span><span class="tech-tag">Python</span>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-
-  <section id="awards" class="reveal">
-    <div class="awards-header">
-        <h2>Awards</h2>
-        <p>What I have done that could be captured...</p>
-    </div>
-    <div class="awards-timeline">
-        <div class="timeline-line"></div>
-        <div class="timeline-items">
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2019</div><div class="timeline-content"><h3>Robotex Estonia</h3><p>International robotics competitor, representing Madagascar for the first time.</p></div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2020</div><div class="timeline-content"><h3>FIRST Mentor</h3><p>Tech mentor for Team Madagascar, achieving a Top 5 finish out of 180 teams.</p></div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2022</div><div class="timeline-content"><h3>Awesomeness of 2022</h3><p>Selected as a top 5 student in a class of over 700.</p></div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2023</div><div class="timeline-content"><h3>Bergh Family Award</h3><p>Recognized for excellence in academics, leadership, and internship performance.</p></div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2024</div><div class="timeline-content"><h3>Van Dyke Prize</h3><p>Awarded for creating an impactful summer project (my coding bootcamp).</p></div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2025</div><div class="timeline-content"><h3>Pan-African Robotics</h3><p>Gold Medal 🥇: 1st Place for ML research and Software Engineering.</p></div></div>
-        </div>
-    </div>
-  </section>
-
   <section id="outside-tech" class="reveal">
     <div class="section-header"><h2>Outside of Tech...</h2></div>
     <div class="outside-tech-container">
-        <div class="outside-tech-text"><p>... Beyond the code, I love bringing people together by organizing hackathons, including a "Stupid Hackathon" in Madagascar focused purely on creativity and fun. <br>As a part-time content creator with over 11k on TikTok, I enjoy romanticizing life by editing and sharing videos about my journey :). <br> And I loveee dancing , I love moving to everything from Afrobeats to K-Pop!</p></div>
+        <div class="outside-tech-text"><p>...Beyond the code, I love bringing people together by organizing hackathons, including a "Stupid Hackathon" in Madagascar focused purely on creativity and fun. <br>As a part-time content creator with over 11k on TikTok, I enjoy romanticizing life by editing and sharing videos about my journey. <br> And I love to dance—from Afrobeats to K-Pop!</p></div>
         <div class="outside-tech-image"><img src="assets/me.png" alt="Landy having fun"></div>
     </div>
   </section>
 
-
-  <div id="karoka-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Karoka</h3><div class="modal-actions"><a href="https://karoka.co/" class="button-secondary" target="_blank">View Live Demo</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/karoka.png" alt="Karoka Screenshot" class="modal-image"></div><div class="modal-text-container"><h4>The Problem</h4><p>Traditional computer science education often fails to engage students with diverse learning styles. I wanted to create a fun, adaptive, and personalized game to teach Python.</p><h4>My Contribution</h4><ul><li>Led the project from concept to deployment as a solo developer.</li><li>Architected the full-stack application using Phaser.js and React.</li><li>Designed the betterSQL database to manage user progress.</li></ul><h4>Results & Impact</h4><ul><li>Acquired <strong>500+ beta testers</strong> within 3 months.</li><li>Feedback indicated a <strong>40% increase</strong> in user confidence with basic Python .</li></ul></div></div></div></div>
-  <div id="miningai-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Mining.AI</h3></div><div class="modal-body"><div class="modal-image-container"><img src="assets/coupe.jpg" alt="AI in mining illustration" class="modal-image"></div><div class="modal-text-container"><h4>The Problem</h4><p>Clay extraction in mining is often inefficient. This project explored using AI to predict clay content from spectral data to improve accuracy.</p><h4>My Contribution</h4><ul><li>Collaborated to research, preprocess, and implement various ML  and CNN models.</li><li>Cleaned and processed a dataset of over 55,000 samples using Pandas.</li><li>Trained and evaluated CNNs ,Random Forests, SVM using PyTorch and Scikit-learn.</li></ul><h4>Results & Impact</h4><ul><li>Our final SVM achieved <strong>92% accuracy</strong>.</li><li>Awarded the <strong>Gold Medal (1st Place)</strong> at the Pan-African Robotics Competition.</li></ul></div></div></div></div>
-  <div id="datanz-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Datanz</h3><div class="modal-actions"><a href="https://github.com/tiaL-ops/Datanz" class="button-secondary" target="_blank">View Github</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/datanz.png" alt="Datanz Dashboard" class="modal-image"></div><div class="modal-text-container"><h4>The Problem</h4><p>Local governments in Tanzania lacked an efficient way to monitor and assess healthcare facilities, leading to data gaps and slow response times.</p><h4>My Contribution</h4><ul><li>As the backend lead, I designed the PostgreSQL database schema.</li><li>Developed the REST API with Node.js and Express to handle all survey data from 13k + facilities.</li><li>Displayed the frontend visualization , and handled translation</li><li>Managed the team's Git workflow and resolved merge conflicts.</li></ul><h4>Results & Impact</h4><ul><li>Delivered a fully functional platform for our Software Engineering capstone.</li><li>The system successfully generates key insights like average wait times and client satisfaction.</li></ul></div></div></div></div>
-  <div id="ffmada-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>F&F Mada<div class="modal-actions"><a href="https://www.fromandformada.com/" class="button-secondary" target="_blank">View Site </a></h3></div><div class="modal-body"><div class="modal-image-container"><img src="assets/ffmada.jpg" alt="F&F Mada cohort" class="modal-image"></div><div class="modal-text-container"><h4>The Problem</h4><p>Access to quality tech education is limited in Madagascar. I wanted to give back to my community and provide the opportunities I was fortunate to have.</p><h4>My Contribution</h4><ul><li>Founded the non-profit and designed the complete curriculum for our Python bootcamps.</li><li>Recruited, trained, and mentored 5 volunteers to become instructors.</li><li>Secured partnerships with 3 local schools to host our workshops.</li></ul><h4>Results & Impact</h4><ul><li>Successfully trained over <strong>200 students</strong> in programming fundamentals.</li><li>Created a sustainable, community-led model for tech education.</li></ul></div></div></div></div>
+  <!-- MODALS: Content is rewritten to be confident and metric-driven -->
+  <div id="miningai-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Machine Learning Research Engineer</h3><div class="modal-actions"><a href="#" class="button-secondary" target="_blank">View Publication (Soon)</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/coupe.jpg" alt="AI in mining illustration" class="modal-image"></div><div class="modal-text-container"><h4>The Challenge</h4><p>Traditional clay extraction in mining is inefficient. This research explored using AI to predict clay mineral content from Mid-Infrared (MIR) spectral data to improve accuracy and efficiency.</p><h4>My Contribution</h4><ul><li>Built and optimized a suite of production-ready models (Random Forest, SVM, CNN) on a dataset of over <strong>55,000 spectral samples</strong>.</li><li>Engineered the complete end-to-end AI solution, from data preprocessing and augmentation to PyTorch CNN development and SHAP-based interpretability.</li><li>Deployed the final model in an interactive <strong>Streamlit application</strong> for real-time use by domain experts.</li></ul><h4>Results & Impact</h4><ul><li>The final model achieved a <strong>92% R² score</strong> in predicting clay content.</li><li>Awarded the <strong>Gold Medal (1st Place)</strong> at the Pan-African Robotics Competition for contributions to ML and software engineering.</li></ul></div></div></div></div>
+  <div id="karoka-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Karoka: AI EdTech Game</h3><div class="modal-actions"><a href="https://karoka.co/" class="button-secondary" target="_blank">View Live Demo</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/karoka.png" alt="Karoka Screenshot" class="modal-image"></div><div class="modal-text-container"><h4>The Challenge</h4><p>Traditional computer science education often fails to engage students with diverse learning styles. I wanted to create a fun, adaptive, and personalized game to teach Python.</p><h4>My Contribution</h4><ul><li>Architected and shipped the entire AI-driven educational game using Phaser.js, React, and Node.js.</li><li>Engineered the GPT-powered personalization system to adapt lessons to player learning styles by iterating on prompt design and context.</li><li>Designed and integrated a scalable backend using PostgreSQL and Firebase for user data management.</li></ul><h4>Results & Impact</h4><ul><li>Acquired <strong>500+ beta testers</strong> within 3 months of launch.</li><li>User feedback indicated a <strong>40% increase</strong> in confidence with basic Python concepts after playing.</li><li>Delivered a full end-to-end production system, from game mechanics to deployment and analytics.</li></ul></div></div></div></div>
+  <div id="datanz-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Datanz: Healthcare Platform</h3><div class="modal-actions"><a href="https://github.com/tiaL-ops/Datanz" class="button-secondary" target="_blank">View Github</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/datanz.png" alt="Datanz Dashboard" class="modal-image"></div><div class="modal-text-container"><h4>The Challenge</h4><p>Local governments in Tanzania lacked an efficient way to monitor and assess healthcare facilities, leading to data gaps and slow response times.</p><h4>My Contribution</h4><ul><li>Built a full-stack web app in Node.js and Express to analyze and visualize access to over <strong>13,000 healthcare facilities</strong>.</li><li>Designed the SQL database models and developed dynamic filters to enable officials to evaluate care quality, wait times, and performance trends.</li><li>Led the team's Git workflow, implementing a branching strategy and resolving complex merge conflicts to ensure a stable main branch.</li></ul><h4>Results & Impact</h4><ul><li>Delivered a fully functional platform for our Software Engineering capstone project.</li><li>The system successfully generates key insights like average wait times and client satisfaction, providing actionable data for public health officials.</li></ul></div></div></div></div>
+  <div id="asecna-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Data Science Intern (Aviation Safety)</h3></div><div class="modal-body"><div class="modal-image-container"><img src="https://placehold.co/600x400/1c1c2e/fcefdc?text=ASECNA" alt="ASECNA Project" class="modal-image"></div><div class="modal-text-container"><h4>The Challenge</h4><p>ASECNA needed to more efficiently analyze vast amounts of flight telemetry data to enhance aviation safety protocols across its member states.</p><h4>My Contribution</h4><ul><li>Engineered scalable Python pipelines to clean, process, and visualize 10 months of flight telemetry data across more than 40 aircraft.</li><li>Built interactive geo-visualizations with Plotly and Folium to analyze complex aviation routes and identify potential safety concerns.</li><li>Developed operational dashboards that provided actionable insights to aviation safety teams.</li></ul><h4>Results & Impact</h4><ul><li>The data pipelines I built <strong>reduced analysis time by 60%</strong>.</li><li>The dashboards directly informed decision-making processes for multiple aviation safety teams, contributing to proactive safety measures.</li></ul></div></div></div></div>
+  <div id="ffmada-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>F&F Mada: Founder</h3><div class="modal-actions"><a href="https://www.fromandformada.com/" class="button-secondary" target="_blank">View Site</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/ffmada.jpg" alt="F&F Mada cohort" class="modal-image"></div><div class="modal-text-container"><h4>The Challenge</h4><p>Access to quality, hands-on tech education is extremely limited in my home country of Madagascar. I wanted to give back to my community and provide the opportunities I was fortunate to have.</p><h4>My Contribution</h4><ul><li>Founded the non-profit and designed the complete curriculum for our free Python bootcamps.</li><li>Recruited, trained, and mentored a team of 5 volunteers to become effective instructors.</li><li>Secured partnerships with 3 local schools to host our workshops, creating a sustainable infrastructure.</li></ul><h4>Results & Impact</h4><ul><li>Successfully trained over <strong>200 students</strong> in programming fundamentals.</li><li>Created a sustainable, community-led model for tech education that continues to operate.</li><li>Awarded the Van Dyke Prize for creating an impactful summer project.</li></ul></div></div></div></div>
+  <div id="ta-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Teaching Assistant</h3></div><div class="modal-body"><div class="modal-image-container"><img src="https://placehold.co/600x400/1c1c2e/fcefdc?text=TA" alt="Teaching Assistant" class="modal-image"></div><div class="modal-text-container"><h4>The Role</h4><p>As a Teaching Assistant for core Computer Science courses, my goal was to demystify complex topics and foster a supportive learning environment for students beginning their programming journey.</p><h4>My Contribution</h4><ul><li>Led weekly code reviews in Java and Python for over <strong>40 students</strong>.</li><li>Mentored students one-on-one to strengthen their programming fundamentals, debug complex issues, and improve their problem-solving skills.</li><li>Provided constructive feedback on assignments and projects to help students grasp key concepts.</li></ul><h4>Results & Impact</h4><ul><li>Contributed to a better understanding of core CS principles for a large cohort of students.</li><li>Helped improve student confidence and reduce anxiety around difficult programming topics.</li></ul></div></div></div></div>
 
   <script src="scripts.js"></script>
 </body>
 <footer>
   <p>&copy; 2025 Landy Rakotoarison. All rights reserved.</p>
   <p>Made with ❤️ and Matcha</p>
+</footer>
 </html>

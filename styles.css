@@ -1,5 +1,5 @@
 /* ======================================
-   1. Base & Original Styles
+   1. Base & Global Styles
    ====================================== */
 html, body {
   margin: 0;
@@ -8,16 +8,17 @@ html, body {
   color: #fcefdc;
   font-family: 'Sour Gummy', sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *, *::before, *::after { box-sizing: inherit; }
 a { text-decoration: none; color: #fcefdc; transition: color 0.3s; }
 a:hover { color: #ffcc99; }
-section { padding: 3rem; }
+section { padding: 4rem 2rem; }
 h2 { font-size: 3rem; font-weight: 900; margin: 0; }
 strong { color: #ffcc99; }
 
 /* ======================================
-   2. REVEAL ON SCROLL ANIMATION
+   2. Reveal on Scroll Animation
    ====================================== */
 .reveal {
   opacity: 0;
@@ -28,123 +29,97 @@ strong { color: #ffcc99; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ======================================
-   3. Navigation, About, Skills, Experience
+   3. Navigation, About, Skills
    ====================================== */
 nav {
   position: sticky; top: 0; left: 0; width: 100%;
-  background-color: #0a0a0a; z-index: 1000;
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
   display: flex; justify-content: center; gap: 2rem;
   padding: 1.5rem; font-size: 1.2rem; border-bottom: 1px solid #333;
 }
-#about { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+#about { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; max-width: 1200px; margin: 0 auto; }
 .about-left { flex: 1.5; min-width: 300px; text-align: center; }
-#picLandy img { max-width: 100%; width: 900px; display: block; margin: 0 auto; }
-#picLandy figcaption { font-family: 'Inter', sans-serif; margin-top: 2rem; font-size: 1.1rem; line-height: 1.4; }
+#picLandy img { max-width: 100%; width: 500px; display: block; margin: 0 auto; }
+#picLandy figcaption { font-family: 'Inter', sans-serif; margin-top: 1.5rem; font-size: 1.1rem; line-height: 1.5; }
 .graduation-icon { font-size: 1.2rem; vertical-align: middle; margin-right: 0.4rem; }
 .about-right {
   flex: 1; min-width: 280px; display: flex; flex-direction: column;
   align-items: flex-start; justify-content: center; gap: 2rem; padding-left: 2rem;
 }
 .social-icons { display: flex; gap: 1.5rem; }
-.social-icons a img { width: 2.2rem; filter: brightness(0) invert(1); transition: transform 0.2s; }
+.social-icons a img { width: 2.5rem; transition: transform 0.2s; }
 .social-icons a:hover img { transform: scale(1.2); }
 .role-item {
   font-weight: 700; font-size: 1.1rem; display: flex; align-items: center;
   gap: 1rem; text-transform: uppercase; letter-spacing: 2px;
 }
-.role-item::before { content: "↳"; font-size: 1.5rem; display: inline-block; }
-#skills, #experience { display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
-.skills-left, .experience-left { flex: 1; min-width: 200px; }
-.skills-right, .experience-right { flex: 2; max-width: 800px; width: 100%; margin: 0 auto; }
-.experience-right { display: flex; flex-direction: column; gap: 2.5rem; }
-.skills-box, .experience-box { border: 2px solid #fcefdc; border-radius: 40px; padding: 2rem; }
-.skills-box { display: flex; align-items: center; gap: 2.5rem; }
+.role-item::before { content: "↳"; font-size: 1.5rem; display: inline-block; color: #ffcc99; }
+#skills { display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+.skills-left { flex: 1; min-width: 200px; }
+.skills-right { flex: 2; max-width: 800px; width: 100%; }
+.skills-box { border: 2px solid #fcefdc; border-radius: 40px; padding: 2rem; display: flex; align-items: center; gap: 2.5rem; }
 .skills-icon { width: 4rem; filter: brightness(0) invert(1); }
-.skills-text p, .experience-box ul { font-family: 'Inter', sans-serif; font-size: 1.1rem; }
-.experience-box h3 { font-size: 2.5rem; margin-bottom: 1rem; }
-.experience-date { text-align: center; font-size: 1rem; margin-top: 1rem; bottom: 100px;}
+.skills-text p { font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.6; }
 
 /* ======================================
-   4. Featured Projects Section
+   4. Projects & Experience Section
    ====================================== */
 #projects { text-align: center; }
 #projects h2 { text-align: center; width: 100%; margin-bottom: 3rem; }
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
-.project-card { border: 2px solid #fcefdc; border-radius: 40px; overflow: hidden; cursor: pointer; transition: all 0.3s ease; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
+.project-card { border: 2px solid #fcefdc; border-radius: 40px; overflow: hidden; cursor: pointer; transition: all 0.3s ease; display: flex; flex-direction: column; }
 .project-card:hover { transform: translateY(-10px); background: #fcefdc; color: #0a0a0a; }
 .project-image { width: 100%; height: 220px; object-fit: cover; }
-.project-info { padding: 2rem; }
-.project-info h3 { font-size: 2rem; margin: 0 0 0.5rem 0; }
-.project-info p { font-family: 'Inter', sans-serif; line-height: 1.6; margin-bottom: 1.5rem; }
+.project-info { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.project-info h3 { font-size: 1.8rem; margin: 0 0 0.5rem 0; }
+.project-info p { font-family: 'Inter', sans-serif; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
 .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
 .tech-tag {
-    background-color: #fcefdc;
-    border: 1px solid #0a0a0a;
-    color: #0a0a0a; /* High contrast text */
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* optional */
+    background-color: #fcefdc; border: 1px solid #0a0a0a; color: #0a0a0a;
+    padding: 0.3rem 0.8rem; border-radius: 20px; font-family: 'Inter', sans-serif;
+    font-size: 0.8rem; font-weight: 700;
 }
-
-.project-card:hover .tech-tag {
-    background-color: #fcefdc; border-color: #0a0a0a; color: #0a0a0a;
-}
+.project-card:hover .tech-tag { background-color: #0a0a0a; border-color: #0a0a0a; color: #fcefdc; }
 
 /* ======================================
    5. Awards Timeline
    ====================================== */
-#awards { display: flex; flex-direction: column; align-items: center; padding-bottom: 5rem; }
+#awards { display: flex; flex-direction: column; align-items: center; padding-bottom: 5rem; max-width: 1200px; margin: 0 auto; }
 .awards-header { text-align: center; margin-bottom: 3rem; }
 .awards-header p { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #b0a8ba; }
-.awards-timeline { width: 100%; overflow-x: auto; padding: 2rem 0; scrollbar-width: thin; scrollbar-color: #fcefdc #0a0a0a; }
-.awards-timeline::-webkit-scrollbar { height: 8px; }
-.awards-timeline::-webkit-scrollbar-track { background: #0a0a0a; }
-.awards-timeline::-webkit-scrollbar-thumb { background-color: #fcefdc; border-radius: 20px; border: 2px solid #0a0a0a; }
-.timeline-items { display: flex; position: relative; padding: 1rem 0; width: max-content; }
-.timeline-line { position: absolute; top: 50%; left: 0; width: 100%; height: 2px; background-color: #333; transform: translateY(-50%); }
-.timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; padding: 0 2.5rem; }
-.timeline-item:nth-child(odd) { padding-bottom: 3rem; margin-top: -1rem; }
-.timeline-item:nth-child(even) { padding-top: 3rem; margin-top: 1rem; }
-
-
+.awards-timeline { width: 100%; position: relative; padding: 2rem 0; }
+.timeline-items { display: flex; justify-content: space-around; position: relative; }
+.timeline-line { position: absolute; top: 25px; left: 10%; width: 80%; height: 2px; background-color: #333; z-index: -1; }
+.timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; width: 30%; }
+.timeline-dot { width: 20px; height: 20px; background-color: #fcefdc; border-radius: 50%; border: 4px solid #0a0a0a; margin-bottom: 1rem; }
 .timeline-date { font-family: 'Sour Gummy', sans-serif; font-size: 1.5rem; font-weight: 700; color: #ffcc99; margin-bottom: 1rem; }
-.timeline-item:nth-child(odd) .timeline-date { position: absolute; bottom: -1.5rem; }
-.timeline-item:nth-child(even) .timeline-date { position: absolute; top: -1.5rem; }
 .timeline-content {
     background-color: #1c1c2e; border: 1px solid #333; border-radius: 15px; padding: 1.5rem;
-    width: 250px; text-align: center; transition: transform 0.3s ease;
+    width: 100%; text-align: center; transition: transform 0.3s ease;
 }
 .timeline-content:hover { transform: translateY(-5px); border-color: #ffcc99; }
 .timeline-content h3 { font-family: 'Sour Gummy', sans-serif; font-size: 1.2rem; margin: 0 0 0.5rem 0; }
 .timeline-content p { font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.5; margin: 0; }
 
 /* ======================================
-   6. Outside-Tech & Contact
+   6. Outside-Tech & Footer
    ====================================== */
 .section-header { text-align: center; margin-bottom: 3rem; }
-.section-header h2 { text-align: center; width: 100%; }
 .outside-tech-container { display: flex; align-items: center; justify-content: center; gap: 3rem; max-width: 900px; margin: 0 auto; flex-wrap: wrap; }
 .outside-tech-text { flex: 1; min-width: 300px; }
 .outside-tech-text p { font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.8; text-align: left; }
 .outside-tech-image { flex: 0 1 300px; }
-.outside-tech-image img { width: 100%; height: auto; display: block; }
-#contact { text-align: center; padding: 5rem 0; }
-.contact-message { font-family: 'Inter', sans-serif; max-width: 600px; margin: 0 auto 2rem; line-height: 1.7; font-size: 1.1rem; }
-.contact-button {
-    display: inline-block; background: #fcefdc; color: #0a0a0a;
-    font-family: 'Sour Gummy', sans-serif; font-size: 1.2rem; font-weight: 700;
-    padding: 0.8rem 2.5rem; border-radius: 50px; text-decoration: none; transition: transform 0.3s ease;
+.outside-tech-image img { width: 100%; height: auto; display: block; border-radius: 20px; }
+footer {
+    padding: 3rem 2rem; text-align: center;
+    border-top: 1px solid #333; margin-top: 2rem;
+    font-family: 'Inter', sans-serif;
 }
-.contact-button:hover { transform: scale(1.05); }
-.social-icons-contact { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
-.social-icons-contact img { width: 2.2rem; filter: brightness(0) invert(1); transition: transform 0.2s; }
-.social-icons-contact img:hover { transform: scale(1.2); }
 
 /* ======================================
-   7. FINAL Modal Styles
+   7. Modal Styles
    ====================================== */
 .modal {
     display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
@@ -153,18 +128,23 @@ nav {
 .modal.show { display: flex; }
 .modal-content {
     background: #1c1c2e; border: 2px solid #fcefdc; border-radius: 40px; max-width: 900px;
-    width: 95%; padding: 2.5rem; position: relative; text-align: left;
+    width: 95%; padding: 2rem 2.5rem; position: relative; text-align: left;
 }
 .modal-close {
     position: absolute; top: 1rem; right: 1.5rem; font-size: 2.5rem;
-    background: none; border: none; color: #fcefdc; cursor: pointer;
+    background: none; border: none; color: #fcefdc; cursor: pointer; line-height: 1;
 }
 .modal-header {
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #fcefdc;
-    margin-bottom: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: 1rem; border-bottom: 2px solid #fcefdc; margin-bottom: 1.5rem;
 }
-.modal-header h3 { font-size: 2.5rem; margin: 0; }
+.modal-header h3 { font-size: 2.2rem; margin: 0; }
+.button-secondary {
+    background: transparent; color: #fcefdc; border: 2px solid #fcefdc;
+    padding: 0.5rem 1.5rem; border-radius: 30px; font-family: 'Inter', sans-serif;
+    font-weight: bold; text-decoration: none; transition: all 0.3s;
+}
+.button-secondary:hover { background: #fcefdc; color: #0a0a0a; }
 .modal-body { display: flex; gap: 2rem; }
 .modal-image-container { flex: 0 0 40%; }
 .modal-image { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; max-height: 500px; }
@@ -186,25 +166,16 @@ nav {
 @media (max-width: 850px) {
     .modal-body { flex-direction: column; }
     .modal-text-container { max-height: none; overflow-y: visible; padding-right: 0; }
+    .awards-timeline { overflow-x: auto; padding: 2rem 0; scrollbar-width: thin; }
+    .timeline-items { width: max-content; padding: 0 2rem; justify-content: flex-start; gap: 4rem; }
+    .timeline-line { left: 2rem; width: calc(100% - 4rem); }
 }
 @media (max-width: 768px) {
-    #about, #skills, #experience, #awards { flex-direction: column; text-align: center; }
+    h2 { font-size: 2.5rem; }
+    #about, #skills { flex-direction: column; text-align: center; }
     .about-right { align-items: center; padding-left: 0; }
-    .skills-left, .experience-left, .awards-left { text-align: center; width: 100%; }
+    .skills-left { text-align: center; width: 100%; }
+    .skills-box { flex-direction: column; text-align: center; }
     .outside-tech-container { text-align: center; }
     .outside-tech-text p { text-align: center; }
 }
-
-
-
-footer {
-    padding: 3rem 2rem;
-    text-align: center;
-    border-top: 1px solid #333;
-    margin-top: 2rem;
-}
-.footer-name { font-size: 1.5rem; font-weight: 700; }
-.footer-socials { display: flex; justify-content: center; gap: 1.5rem; margin: 1rem 0; }
-.footer-socials img { width: 2rem; filter: brightness(0) invert(1); transition: transform 0.2s; }
-.footer-socials img:hover { transform: scale(1.2); }
-.footer-copyright { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #b0a8ba; }
