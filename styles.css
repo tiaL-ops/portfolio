@@ -17,6 +17,46 @@ section { padding: 4rem 2rem; }
 h2 { font-size: 3rem; font-weight: 900; margin: 0; }
 strong { color: #ffcc99; }
 
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-link img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Base style for all icons */
+.icon-link {
+  background-color: #fcefdc; /* Soft beige background */
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+/* All icons in black */
+.icon-link img {
+  filter: invert(0%) brightness(0); /* solid black */
+  width: 30px;
+  height: 30px;
+}
+
+/* Hover: small zoom effect */
+.icon-link:hover {
+  transform: scale(1.1);
+}
+
+
+
 /* ======================================
    2. Reveal on Scroll Animation
    ====================================== */
