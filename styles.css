@@ -32,9 +32,8 @@ strong { color: #ffcc99; }
   gap: 10px;
 }
 
-/* Base style for all icons */
 .icon-link {
-  background-color: #fcefdc; /* Soft beige background */
+  background-color: #fcefdc;
   border-radius: 50%;
   padding: 5px;
   display: flex;
@@ -43,19 +42,15 @@ strong { color: #ffcc99; }
   transition: transform 0.3s ease;
 }
 
-/* All icons in black */
 .icon-link img {
-  filter: invert(0%) brightness(0); /* solid black */
+  filter: invert(0%) brightness(0);
   width: 30px;
   height: 30px;
 }
 
-/* Hover: small zoom effect */
 .icon-link:hover {
   transform: scale(1.1);
 }
-
-
 
 /* ======================================
    2. Reveal on Scroll Animation
@@ -104,35 +99,170 @@ nav {
 .skills-text p { font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.6; }
 
 /* ======================================
-   4. Projects & Experience Section
+   4. Projects Grid
    ====================================== */
 #projects { text-align: center; }
 #projects h2 { text-align: center; width: 100%; margin-bottom: 3rem; }
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
-.project-card { border: 2px solid #fcefdc; border-radius: 40px; overflow: hidden; cursor: pointer; transition: all 0.3s ease; display: flex; flex-direction: column; }
-.project-card:hover { transform: translateY(-10px); background: #fcefdc; color: #0a0a0a; }
-.project-image { width: 100%; height: 220px; object-fit: cover; }
-.project-info { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-.project-info h3 { font-size: 1.8rem; margin: 0 0 0.5rem 0; }
-.project-info p { font-family: 'Inter', sans-serif; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
-.tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
-.tech-tag {
-    background-color: #fcefdc; border: 1px solid #0a0a0a; color: #0a0a0a;
-    padding: 0.3rem 0.8rem; border-radius: 20px; font-family: 'Inter', sans-serif;
-    font-size: 0.8rem; font-weight: 700;
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.project-card:hover .tech-tag { background-color: #0a0a0a; border-color: #0a0a0a; color: #fcefdc; }
+
+@media (min-width: 1024px) {
+    #projects .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.project-card {
+    border: 2px solid #fcefdc;
+    border-radius: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    background: #fcefdc;
+    color: #0a0a0a;
+}
+.project-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.project-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project-info h3 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+}
+.project-info p {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+.tech-tag {
+    background-color: #fcefdc;
+    border: 1px solid #0a0a0a;
+    color: #0a0a0a;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.project-card:hover .tech-tag {
+    background-color: #0a0a0a;
+    border-color: #0a0a0a;
+    color: #fcefdc;
+}
 
 /* ======================================
-   5. Awards Timeline
+   5. Creative Community Section
+   ====================================== */
+.full-width-section {
+    padding: 5rem 0;
+    background-color: #111; /* Darker background for contrast */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%23222" fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
+    background-attachment: fixed; /* Parallax effect */
+}
+.community-grid-creative {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.community-card-creative {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.community-card-creative::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.community-card-creative:hover::before {
+    transform: scale(1.05);
+}
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.98) 30%, rgba(10,10,10,0.1));
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fcefdc;
+    border-radius: 30px;
+    transition: background 0.4s ease;
+}
+.community-card-creative:hover .card-overlay {
+    background: linear-gradient(to top, rgba(10,10,10,0.9) 20%, transparent);
+}
+.card-overlay h4 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    color: #fcefdc;
+}
+.card-overlay p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+.card-overlay .button-secondary {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    align-self: flex-start;
+}
+.community-card-creative:hover .button-secondary {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ======================================
+   6. Awards Timeline
    ====================================== */
 #awards { display: flex; flex-direction: column; align-items: center; padding-bottom: 5rem; max-width: 1200px; margin: 0 auto; }
 .awards-header { text-align: center; margin-bottom: 3rem; }
 .awards-header p { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #b0a8ba; }
 .awards-timeline { width: 100%; position: relative; padding: 2rem 0; }
-.timeline-items { display: flex; justify-content: space-around; position: relative; }
-.timeline-line { position: absolute; top: 25px; left: 10%; width: 80%; height: 2px; background-color: #333; z-index: -1; }
-.timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; width: 30%; }
+.timeline-items { display: flex; justify-content: space-between; position: relative; }
+.timeline-line { position: absolute; top: 25px; left: 5%; width: 90%; height: 2px; background-color: #333; z-index: -1; }
+.timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; width: 22%; /* Adjusted for 4 items */ }
 .timeline-dot { width: 20px; height: 20px; background-color: #fcefdc; border-radius: 50%; border: 4px solid #0a0a0a; margin-bottom: 1rem; }
 .timeline-date { font-family: 'Sour Gummy', sans-serif; font-size: 1.5rem; font-weight: 700; color: #ffcc99; margin-bottom: 1rem; }
 .timeline-content {
@@ -144,7 +274,7 @@ nav {
 .timeline-content p { font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.5; margin: 0; }
 
 /* ======================================
-   6. Outside-Tech & Footer
+   7. Outside-Tech & Footer
    ====================================== */
 .section-header { text-align: center; margin-bottom: 3rem; }
 .outside-tech-container { display: flex; align-items: center; justify-content: center; gap: 3rem; max-width: 900px; margin: 0 auto; flex-wrap: wrap; }
@@ -159,7 +289,7 @@ footer {
 }
 
 /* ======================================
-   7. Modal Styles
+   8. Modal Styles
    ====================================== */
 .modal {
     display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
@@ -201,14 +331,37 @@ footer {
 .modal-text-container ul { padding-left: 20px; margin-bottom: 1rem; }
 
 /* ======================================
-   8. Responsive Adjustments
+   9. Responsive Adjustments
    ====================================== */
+@media (max-width: 950px) { /* Adjusted breakpoint for timeline scroll */
+    .awards-timeline { 
+        overflow-x: auto; 
+        padding-bottom: 2rem;
+        scrollbar-width: thin;
+        scrollbar-color: #ffcc99 #1c1c2e;
+    }
+    .awards-timeline::-webkit-scrollbar { height: 8px; }
+    .awards-timeline::-webkit-scrollbar-track { background: #1c1c2e; }
+    .awards-timeline::-webkit-scrollbar-thumb { background-color: #ffcc99; border-radius: 20px; }
+    
+    .timeline-items { 
+        width: max-content; 
+        padding: 0 2rem; 
+        justify-content: flex-start; 
+        gap: 4rem; 
+    }
+    .timeline-item {
+        width: 280px; /* Fixed width for scrolling items */
+    }
+    .timeline-line { 
+        left: 2rem; 
+        width: calc(100% - 4rem); 
+    }
+}
+
 @media (max-width: 850px) {
     .modal-body { flex-direction: column; }
     .modal-text-container { max-height: none; overflow-y: visible; padding-right: 0; }
-    .awards-timeline { overflow-x: auto; padding: 2rem 0; scrollbar-width: thin; }
-    .timeline-items { width: max-content; padding: 0 2rem; justify-content: flex-start; gap: 4rem; }
-    .timeline-line { left: 2rem; width: calc(100% - 4rem); }
 }
 @media (max-width: 768px) {
     h2 { font-size: 2.5rem; }
