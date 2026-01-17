@@ -16,6 +16,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
     <a href="#community">Community</a>
     <a href="#awards">Awards</a>
     <a href="#skills">Skills</a>
@@ -51,16 +52,7 @@
   <section id="projects" class="reveal">
       <h2>Projects & Experience</h2>
       <div class="project-grid">
-        <div class="project-card" data-modal-target="miningai-modal">
-          <img src="assets/coupe.jpg" alt="Award for the Mining.AI project" class="project-image">
-          <div class="project-info">
-            <h3>Machine Learning Research</h3>
-            <p>End-to-end hybrid ML and DL solution to predict clay mineral content from 55k+ spectral samples.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">PyTorch</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Research</span><span class="tech-tag">StreamLit</span>
-            </div>
-          </div>
-        </div>
+      
         <div class="project-card" data-modal-target="karoka-modal">
           <img src="assets/karoka.png" alt="Karoka Game Screenshot" class="project-image">
           <div class="project-info">
@@ -123,6 +115,52 @@
 
       </div>
   </section>
+
+  <section id="research" class="reveal">
+  <div class="divider-line"></div>
+  <h2>ML/LLM Research</h2>
+
+  <div class="project-grid">
+    
+    <div class="project-card" data-modal-target="miningai-modal">
+        <img src="assets/coupe.jpg" alt="Award for the Mining.AI project" class="project-image">
+        <div class="project-info">
+          <h3>Machine Learning Research</h3>
+          <p>End-to-end hybrid ML and DL solution to predict clay mineral content from 55k+ spectral samples.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">PyTorch</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Research</span><span class="tech-tag">StreamLit</span>
+          </div>
+        </div>
+      </div>
+
+    <div class="project-card" data-modal-target="thesis-modal">
+        <img src="assets/lafayette.png" alt="Senior Thesis" class="project-image">
+        <div class="project-info">
+    
+        <h3>Adaptive Learning in Game-Based Programming</h3>
+        <p><strong>Advised by Professor Christian Lopez</strong></p>
+        <p>Investigating how ML and Small Language Models (SLMs) can provide personalized, offline-first Python mentorship[cite: 33, 38].</p>
+        <div class="tech-stack">
+          <span class="tech-tag">SLM Optimization</span><span class="tech-tag">VARK Modeling</span><span class="tech-tag">Game Telemetry</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-modal-target="poster-modal">
+        <img src="assets/poster.jpg" alt="Symposium Poster" class="project-image">
+        <div class="project-info">
+      
+        <h3>User Modeling Bias in LLMs</h3>
+        <p>Presented at the <strong>Trusted AI Symposium</strong></p>
+        <p>Analyzing how LLMs inherit biases when modeling student profiles for adaptive education.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">AI Ethics</span><span class="tech-tag">Inclusive Design</span><span class="tech-tag">HCI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
 
   <section id="community" class="reveal full-width-section">
     <div class="section-header">
@@ -196,6 +234,64 @@
         <div class="outside-tech-image"><img src="assets/me.png" alt="Landy having fun"></div>
     </div>
   </section>
+
+  <div id="thesis-modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <div class="modal-header">
+      <h3>Senior Thesis: Adaptive Learning Modalities</h3>
+    </div>
+    <div class="modal-body">
+      <div class="modal-text-container">
+        <h4>The Challenge</h4>
+        <p>
+          Most LLM-based educational tools depend on stable internet for API calls, which limits accessibility for learners in low-resource regions like <strong>Madagascar</strong>[cite: 6, 26]. Additionally, many current systems fail to account for individual learning styles and emotions, leading to "vague" educational experiences[cite: 55, 56].
+        </p>
+        
+        <h4>My Contribution</h4>
+        <ul>
+          <li>Developed a 2D story-based game (Karoka) to teach Python to beginners[cite: 33, 220].</li>
+          <li>Implemented a comprehensive logging system to track game telemetry (interaction frequency, time allocation, navigation patterns)[cite: 30, 36, 111].</li>
+          <li>Designed coding challenges and materials specifically aligned with the <strong>VARK model</strong> (Visual, Auditory, Read/Write, Kinesthetic)[cite: 14, 35, 103].</li>
+          <li>Comparing locally run <strong>Small Language Models (SLMs)</strong> against large API-based models to ensure offline functionality[cite: 25, 38].</li>
+        </ul>
+
+        <h4>Results</h4>
+        <ul>
+          <li>Successfully shipped the baseline game and materials to <strong>2,000+ beta testers</strong>[cite: 220].</li>
+          <li>Current data analysis involves recovering VARK scores from behavior data of 487 participants to eliminate the need for fixed surveys[cite: 120, 125].</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="poster-modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <div class="modal-header">
+      <h3>Trusted AI Symposium: Assessing User Modeling Bias</h3>
+    </div>
+    <div class="modal-body">
+      <div class="modal-text-container">
+        <h4>The Challenge</h4>
+        <p>AI tutors often make assumptions about a student’s ability or background based on limited data, which can reinforce educational inequities rather than bridging them.</p>
+        
+        <h4>My Contribution</h4>
+        <ul>
+          <li>Conducted a comparative analysis of how different LLM architectures model diverse learner personas.</li>
+          <li>Evaluated bias in pedagogical recommendations when the system is presented with non-traditional student data.</li>
+        </ul>
+
+        <h4>Results</h4>
+        <ul>
+          <li>Proposed a set of <strong>inclusive AI design rubrics</strong> to help developers identify and mitigate bias in adaptive tutoring systems.</li>
+          <li>Research presented to an audience of AI safety and ethics experts at the Trusted AI Symposium.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
   <div id="miningai-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Machine Learning Research Engineer</h3><div class="modal-actions"><a href="assets/poster.jpg" class="button-secondary" target="_blank">View RP</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/coupe.jpg" alt="AI in mining illustration" class="modal-image"></div><div class="modal-text-container"><h4>The Challenge</h4><p>Clay is a disruptive element that can hurt <strong>valuable</strong> mineral <strong>extraction</strong> process. This research explored using AI to predict clay mineral content from Mid-Infrared (MIR) spectral data to improve accuracy and efficiency in flotation.</p><h4>My Contribution</h4><ul><li>Built and optimized a suite of production-ready models (Random Forest, SVM, CNN) on a dataset of over <strong>55,000 spectral samples</strong>.</li><li>Engineered the complete end-to-end AI solution, from data preprocessing to PyTorch CNN development and SHAP-based interpretability.</li><li>Deployed the final model in an interactive <strong>Streamlit application</strong> for real-time use by domain experts.</li></ul><h4>Results & Impact</h4><ul><li>The final model achieved a <strong>92% R² score</strong> in predicting clay content.</li><li>Awarded the <strong>Gold Medal (1st Place)</strong> at the Pan-African Robotics Competition.</li></ul></div></div></div></div>
   <div id="karoka-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Karoka: AI EdTech Game</h3><div class="modal-actions"><a href="https://karoka.co/" class="button-secondary" target="_blank">View Live Demo</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/karoka.png" alt="Karoka Screenshot" class="modal-image"></div><div class="modal-text-container"><h4>The Challenge</h4><p>Traditional computer science education often fails to engage students with diverse learning styles. I wanted to create a fun, adaptive, and personalized game to teach Python.</p><h4>My Contribution</h4><ul><li>Architected and shipped the entire AI-driven educational game using Phaser.js, React, and Node.js.</li><li>Engineered the GPT-powered personalization system to adapt lessons to player learning styles by iterating on prompt design and context.</li><li>Designed and integrated a scalable backend using PostgreSQL and Firebase for user data management.</li></ul><h4>Results & Impact</h4><ul><li>Acquired <strong>1000+ beta testers</strong></li><li>User feedback indicated a <strong>40% increase</strong> in confidence with basic Python concepts after playing.</li></ul></div></div></div></div>

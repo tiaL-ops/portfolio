@@ -101,8 +101,8 @@ nav {
 /* ======================================
    4. Projects Grid
    ====================================== */
-#projects { text-align: center; }
-#projects h2 { text-align: center; width: 100%; margin-bottom: 3rem; }
+#projects, #research { text-align: center; }
+#projects h2, #research h2 { text-align: center; width: 100%; margin-bottom: 3rem; }
 
 .project-grid {
     display: grid;
@@ -112,8 +112,19 @@ nav {
     margin: 0 auto;
 }
 
+.project-grid.research-centered {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.project-grid.research-centered .project-card {
+    flex: 0 1 400px;
+    width: 100%;
+}
+
 @media (min-width: 1024px) {
-    #projects .project-grid {
+    #projects .project-grid,
+    #research .project-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
