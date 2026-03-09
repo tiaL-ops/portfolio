@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
   revealOnScroll(); // Trigger once on load
 
   // --- Automatic Modal Wiring ---
-  const allProjectCards = document.querySelectorAll('.project-card, .project-item');
-  allProjectCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const modalId = card.getAttribute('data-modal-target');
+  const allModalTriggers = document.querySelectorAll('[data-modal-target]');
+  allModalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalId = trigger.getAttribute('data-modal-target');
       const modal = document.getElementById(modalId);
       if (modal) {
         modal.classList.add('show');
