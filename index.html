@@ -15,6 +15,7 @@
 
   <nav>
     <a href="#about">About</a>
+    <a href="#featured">Featured</a>
     <a href="#projects">SWE</a>
     <a href="#research">Research</a>
     <a href="#community">Community</a>
@@ -49,22 +50,69 @@
     </div>
   </section>
   
+  <!-- ========== FEATURED WORK: KAROKA ========== -->
+  <section id="featured" class="reveal">
+    <div class="featured-wrapper">
+      <span class="featured-label">★ Featured Project</span>
+      <h2 class="featured-title">The project I'm most proud of</h2>
+
+      <div class="featured-layout">
+        <div class="featured-video-wrap">
+          <video controls autoplay muted loop playsinline>
+            <source src="karoka_Demo.mp4" type="video/mp4">
+            <source src="karoka_Demo.mov" type="video/quicktime">
+            <source src="assets/karoka_Demo.mp4" type="video/mp4">
+            <img src="assets/karoka.png" alt="Karoka Screenshot">
+          </video>
+          <span class="play-badge">▶ Live Demo</span>
+        </div>
+
+        <div class="featured-info">
+          <div>
+            <h3 class="featured-project-name">Karoka</h3>
+            <p class="featured-subtitle">AI EdTech Game</p>
+            <p class="featured-desc">
+              A 2D story-based game that teaches Python through personalized learning paths.
+              Powered by GPT to adapt lessons to each player's style, building with accessibility
+              in mind so learners in low-resource regions like Madagascar can play offline too.
+            </p>
+          </div>
+
+          <div class="featured-stats">
+            <div class="stat">
+              <span class="stat-number">2k+</span>
+              <span class="stat-label">Beta testers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">350h+</span>
+              <span class="stat-label">Work on it</span>
+            </div>
+           
+          </div>
+
+          <div class="featured-tags">
+            <span class="tag">Phaser.js</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">GPT</span>
+            <span class="tag">Docker</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+
+          <div class="featured-actions">
+            <a href="https://karoka.co/" target="_blank" class="btn-primary">Visit Karoka ↗</a>
+            <button class="btn-ghost" data-modal-target="karoka-modal">Full Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="projects" class="reveal">
       <h2>Software Engineering Experience</h2>
       <div class="project-list">
       
-        <div class="project-item" data-modal-target="karoka-modal">
-          <img src="assets/karoka.png" alt="Karoka Game Screenshot" class="project-image">
-          <div class="project-info">
-            <h3>Karoka: Edtech Game</h3>
-           <p style="font-family: 'Sour Gummy', sans-serif; font-weight:bold;"> (current favorite 🔥) </p>
-            <p>2D game that teaches Python through personalized learning paths using GenAi and ML.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Phaser.js</span><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">GPT</span><span class="tech-tag">Docker</span>
-            </div>
-          </div>
-        </div>
-         <div class="project-item" data-modal-target="haira-modal">
+        <div class="project-item" data-modal-target="haira-modal">
         <img src="assets/haira.png" alt="hAIra Project" class="project-image">
         <div class="project-info">
           <h3>hAIra: Human-AI Teaming</h3>
@@ -307,10 +355,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image-container">
-          <!--
-            Place karoka_Demo.mov (or karoka_Demo.mp4) in the same folder as index.html.
-            For best browser support, convert: ffmpeg -i karoka_Demo.mov karoka_Demo.mp4
-          -->
+      
           <video class="modal-image" style="object-fit:cover;" controls autoplay muted loop playsinline>
             <source src="karoka_Demo.mp4" type="video/mp4">
             <source src="karoka_Demo.mov" type="video/quicktime">
@@ -393,6 +438,6 @@ It's a space where AI collaboration encourages reflection, not dependency.
 </body>
 <footer>
   <p>&copy; 2026 Landy Rakotoarison. All rights reserved.</p>
-  <p>Made with ❤️ and Matcha</p>
+  <p>Made with ❤️ and Hot Chai </p>
 </footer>
 </html>

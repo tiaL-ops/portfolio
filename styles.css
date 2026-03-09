@@ -99,6 +99,194 @@ nav {
 .skills-text p { font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.6; }
 
 /* ======================================
+   FEATURED PROJECT SECTION
+   ====================================== */
+#featured {
+  padding: 5rem 2rem;
+  border-top: 1px solid rgba(252,239,220,0.12);
+  border-bottom: 1px solid rgba(252,239,220,0.12);
+}
+.featured-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.featured-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffcc99;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.featured-title {
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 3rem;
+  line-height: 1.1;
+}
+.featured-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .featured-layout { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* Video side */
+.featured-video-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(252,239,220,0.25);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  background: #111;
+}
+.featured-video-wrap video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+.play-badge {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0,0,0,0.75);
+  border: 1px solid rgba(252,239,220,0.3);
+  color: #fcefdc;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+/* Info side */
+.featured-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.featured-project-name {
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin: 0 0 0.2rem;
+}
+.featured-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffcc99;
+  margin: 0 0 0.8rem;
+}
+.featured-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(252,239,220,0.85);
+  margin: 0;
+}
+
+/* Stats */
+.featured-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.stat-number {
+  font-family: 'Sour Gummy', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ffcc99;
+  line-height: 1;
+}
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(252,239,220,0.6);
+}
+
+/* Tags */
+.featured-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.featured-tags .tag {
+  background: rgba(252,239,220,0.1);
+  border: 1px solid rgba(252,239,220,0.3);
+  color: #fcefdc;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Action buttons */
+.featured-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.btn-primary {
+  background: #ffcc99;
+  color: #0a0a0a;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.btn-primary:hover {
+  background: #ffd9a8;
+  color: #0a0a0a;
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  background: transparent;
+  color: #fcefdc;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(252,239,220,0.4);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.btn-ghost:hover {
+  border-color: #fcefdc;
+  background: rgba(252,239,220,0.07);
+  color: #fcefdc;
+  transform: translateY(-2px);
+}
+
+/* ======================================
    4. Projects List (SWE Section)
    ====================================== */
 #projects, #research { text-align: center; }
