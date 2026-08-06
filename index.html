@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Landy Rakotoarison | Software & AI Engineer</title>
+  <title>Landy Rakotoarison | Software & AI Engineer | Research </title>
   
   <link rel="stylesheet" href="styles.css">
 
@@ -49,69 +49,45 @@
       <div class="role-item">COMMUNITY BUILDER</div>
     </div>
   </section>
-  
-  <!-- ========== FEATURED WORK: KAROKA ========== -->
-  <section id="featured" class="reveal">
-    <div class="featured-wrapper">
-      <span class="featured-label">★ Featured Project</span>
-      <h2 class="featured-title">The project I'm most proud of</h2>
-
-      <div class="featured-layout">
-        <div class="featured-video-wrap">
-          <video controls autoplay muted loop playsinline>
-            <source src="karoka_Demo.mp4" type="video/mp4">
-            <source src="karoka_Demo.mov" type="video/quicktime">
-            <source src="assets/karoka_Demo.mp4" type="video/mp4">
-            <img src="assets/karoka.png" alt="Karoka Screenshot">
-          </video>
-          <span class="play-badge">▶ Live Demo</span>
-        </div>
-
-        <div class="featured-info">
-          <div>
-            <h3 class="featured-project-name">Karoka</h3>
-            <p class="featured-subtitle">AI EdTech Game</p>
-            <p class="featured-desc">
-              A 2D story-based game that teaches Python through personalized learning paths.
-              I wrapped it aroud GPT to adapt lessons each player's style, building with accessibility
-              in mind so learners in low-resource regions like Madagascar can play offline too.
-            </p>
-          </div>
-
-          <div class="featured-stats">
-            <div class="stat">
-              <span class="stat-number">2k+</span>
-              <span class="stat-label">Beta testers</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">350h+</span>
-              <span class="stat-label">Work on it</span>
-            </div>
-           
-          </div>
-
-          <div class="featured-tags">
-            <span class="tag">Phaser.js</span>
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">GPT</span>
-            <span class="tag">Docker</span>
-            <span class="tag">PostgreSQL</span>
-          </div>
-
-          <div class="featured-actions">
-            <a href="https://karoka.co/" target="_blank" class="btn-primary">Visit Karoka ↗</a>
-            <button class="btn-ghost" data-modal-target="karoka-modal">Full Details</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section id="projects" class="reveal">
       <h2>Software Engineering Experience</h2>
       <div class="project-list">
-      
+
+        <div class="project-item" data-modal-target="uw-modal">
+        <img src="assets/wp.png" alt="University of Washington – Wordplay" class="project-image">
+        <div class="project-info">
+          <h3>Software Developer – University of Washington</h3>
+
+          <p>Building Wordplay, an accessible programming language, with a focus on multilingual support across the frontend, backend, and database.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">React, Node</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">LLM</span>
+            <span class="tech-tag">UI,UX</span>
+            <span class="tech-tag">Chrome API</span>
+            <span class="tech-tag">Product Engineer</span>
+          </div>
+        </div>
+      </div>
+
+        <div class="project-item" data-modal-target="karoka-modal">
+        <img src="assets/karoka.png" alt="Karoka Project" class="project-image">
+        <div class="project-info">
+          <h3>Karoka: AI EdTech Game</h3>
+
+          <p>A 2D story-based game that teaches Python through personalized, GPT-powered learning paths, built to work offline in low-resource regions.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Phaser.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">GPT</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
         <div class="project-item" data-modal-target="haira-modal">
         <img src="assets/haira.png" alt="hAIra Project" class="project-image">
         <div class="project-info">
@@ -206,6 +182,16 @@
         </div>
       </div>
     </div>
+    <div class="project-card" data-modal-target="aiagents-modal">
+        <img src="assets/iEEE.png" alt="Award for the Mining.AI project" class="project-image">
+        <div class="project-info">
+          <h3>AI agents investigation </h3>
+         <p>Built a multi-agent simulation with LangGraph and Phaser to study AI agents' decision-making, cooperation, and greed in shared-resource environments.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Langgrpah</span><span class="tech-tag">Phaser</span><span class="tech-tag">Research</span><span class="tech-tag">StreamLit</span>
+          </div>
+        </div>
+      </div>
   </div>
 
 </section>
@@ -341,8 +327,44 @@
   </div>
 </div>
 
-  <div id="miningai-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Machine Learning Research Engineer</h3><div class="modal-actions"><a href="assets/poster.jpg" class="button-secondary" target="_blank">View RP</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/coupe.jpg" alt="AI in mining illustration" class="modal-image"></div><div class="modal-text-container"><h4>The Challenge</h4><p>Clay is a disruptive element that can hurt <strong>valuable</strong> mineral <strong>extraction</strong> process. This research explored using AI to predict clay mineral content from Mid-Infrared (MIR) spectral data to improve accuracy and efficiency in flotation.</p><h4>My Contribution</h4><ul><li>Built and optimized a suite of production-ready models (Random Forest, SVM, CNN) on a dataset of over <strong>55,000 spectral samples</strong>.</li><li>Engineered the complete end-to-end AI solution, from data preprocessing to PyTorch CNN development and SHAP-based interpretability.</li><li>Deployed the final model in an interactive <strong>Streamlit application</strong> for real-time use by domain experts.</li></ul><h4>Results & Impact</h4><ul><li>The final model achieved a <strong>92% R² score</strong> in predicting clay content.</li><li>Awarded the <strong>Gold Medal (1st Place)</strong> at the Pan-African Robotics Competition.</li></ul></div></div></div></div>
 
+  <div id="miningai-modal" class="modal"><div class="modal-content"><button class="modal-close">&times;</button><div class="modal-header"><h3>Machine Learning Research Engineer</h3><div class="modal-actions"><a href="assets/poster.jpg" class="button-secondary" target="_blank">View RP</a></div></div><div class="modal-body"><div class="modal-image-container"><img src="assets/coupe.jpg" alt="AI in mining illustration" class="modal-image"></div><div class="modal-text-container"><h4>The Challenge</h4><p>Clay is a disruptive element that can hurt <strong>valuable</strong> mineral <strong>extraction</strong> process. This research explored using AI to predict clay mineral content from Mid-Infrared (MIR) spectral data to improve accuracy and efficiency in flotation.</p><h4>My Contribution</h4><ul><li>Built and optimized a suite of production-ready models (Random Forest, SVM, CNN) on a dataset of over <strong>55,000 spectral samples</strong>.</li><li>Engineered the complete end-to-end AI solution, from data preprocessing to PyTorch CNN development and SHAP-based interpretability.</li><li>Deployed the final model in an interactive <strong>Streamlit application</strong> for real-time use by domain experts.</li></ul><h4>Results & Impact</h4><ul><li>The final model achieved a <strong>92% R² score</strong> in predicting clay content.</li><li>Awarded the <strong>Gold Medal (1st Place)</strong> at the Pan-African Robotics Competition.</li></ul></div></div></div></div>
+  <div id="aiagents-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-header">
+        <h3>Do AI Agents Exhibit Greed in Shared Resource Environments?</h3>
+        <div class="modal-actions">
+          <a href="https://github.com/tiaL-ops/simCo" class="button-secondary" target="_blank">View GitHub</a>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image-container">
+          <img src="assets/iEEE.png" alt="IEEE AITest 2026" class="modal-image">
+        </div>
+        <div class="modal-text-container">
+          <p><em>Published at the 2026 IEEE International Conference on Artificial Intelligence Testing (AITest).</em></p>
+ 
+          <h4>The Challenge</h4>
+          <p>LLMs are increasingly used as agents in simulations, yet there is limited research on whether they exhibit greedy decision-making in shared-resource environments — and almost no cross-model benchmarking exists.</p>
+ 
+          <h4>My Contribution</h4>
+          <ul>
+            <li>Designed and built a multi-agent social game framework with <strong>10 agents</strong> using LangGraph and Phaser, where agents socialize and then compete over a shared $100k prize pool.</li>
+            <li>Ran experiments across <strong>two conditions</strong> (social interaction vs. prompt-injected context) and <strong>four frontier models</strong> (GPT-5-mini, Gemini-3-Flash, Claude Haiku 4.5, Grok-3-mini).</li>
+            <li>Defined a formal greediness metric and evaluated <strong>240 agent decisions</strong> across 24 experimental runs.</li>
+          </ul>
+ 
+          <h4>Results & Impact</h4>
+          <ul>
+            <li>Agents predominantly exhibited <strong>greed-like behavior</strong> across all conditions and models.</li>
+            <li>Social interaction and self-reported connection scores (93%+ rated 4 or higher) <strong>did not reduce greediness</strong> — suggesting reported connections may be superficial.</li>
+            <li>No significant difference in greediness across models, despite differences in self-reported connection scores.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Karoka Modal — with video replacing the static image -->
   <div id="karoka-modal" class="modal">
     <div class="modal-content">
@@ -426,14 +448,53 @@ It's a space where AI collaboration encourages reflection, not dependency.
     <h4>Results & Reflections</h4>
     <ul>
       <li>Deepened my understanding of human–AI collaboration and advanced prompt engineering — a field I'm still actively exploring.</li>
-      <li>Submitted <strong>hAIra</strong> to the <strong>Google Chrome Built-in AI Challenge</strong> — awaiting results, but already proud of what we've built.</li>
     </ul>
   </div>
 </div>
 
-
     </div>
   </div>
+
+  <div id="uw-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-header">
+        <h3>Software Developer – University of Washington</h3>
+        <div class="modal-actions">
+          <a href="https://wordplay.dev/" class="button-secondary" target="_blank">View Demo</a>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image-container">
+          <img src="assets/wp.png" alt="Wordplay at University of Washington" class="modal-image">
+        </div>
+        <div class="modal-text-container">
+          <p>
+            Working with Dr. Amy Ko to develop <strong>Wordplay</strong>, a programming language designed to be
+            accessible, usable, and expressive for everyone. My main focus has been integrating multilingual
+            support to improve accessibility, contributing across the frontend, backend, and database.
+          </p>
+
+          <h4>The Challenge</h4>
+          <p>Most programming languages assume English literacy and able-bodied users, leaving out huge groups of learners. Wordplay set out to make coding welcoming to people of different languages and abilities.</p>
+
+          <h4>My Contribution</h4>
+          <ul>
+            <li>Led work on <strong>multilingual support</strong> so the language and its editor can be used beyond English.</li>
+            <li>Contributed across the full stack — frontend, backend, and database — to ship accessibility-focused features.</li>
+           
+          </ul>
+
+          <h4>Results & Impact</h4>
+          <ul>
+            <li>Expanded the reach of an open, accessible programming language to a more diverse group of learners.</li>
+            <li>Grew my experience in building inclusive, research-driven developer tools.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="scripts.js"></script>
 </body>
 <footer>
