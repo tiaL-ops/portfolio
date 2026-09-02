@@ -553,7 +553,7 @@ nav {
 .awards-timeline { width: 100%; position: relative; padding: 2rem 0; }
 .timeline-items { display: flex; justify-content: space-between; position: relative; }
 .timeline-line { position: absolute; top: 25px; left: 5%; width: 90%; height: 2px; background-color: #333; z-index: -1; }
-.timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; width: 22%; /* Adjusted for 4 items */ }
+.timeline-item { display: flex; flex-direction: column; align-items: center; position: relative; width: 17%; /* Adjusted for 4 items */ }
 .timeline-dot { width: 20px; height: 20px; background-color: #fcefdc; border-radius: 50%; border: 4px solid #0a0a0a; margin-bottom: 1rem; }
 .timeline-date { font-family: 'Sour Gummy', sans-serif; font-size: 1.5rem; font-weight: 700; color: #ffcc99; margin-bottom: 1rem; }
 .timeline-content {
