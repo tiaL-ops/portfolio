@@ -557,12 +557,12 @@ nav {
 .timeline-dot { width: 20px; height: 20px; background-color: #fcefdc; border-radius: 50%; border: 4px solid #0a0a0a; margin-bottom: 1rem; }
 .timeline-date { font-family: 'Sour Gummy', sans-serif; font-size: 1.5rem; font-weight: 700; color: #ffcc99; margin-bottom: 1rem; }
 .timeline-content {
-    background-color: #1c1c2e; border: 1px solid #333; border-radius: 15px; padding: 1.5rem;
+  background-color: #1c1c2e; border: 1px solid #333; border-radius: 15px; padding: 1.2rem;
     width: 100%; text-align: center; transition: transform 0.3s ease;
 }
 .timeline-content:hover { transform: translateY(-5px); border-color: #ffcc99; }
-.timeline-content h3 { font-family: 'Sour Gummy', sans-serif; font-size: 1.2rem; margin: 0 0 0.5rem 0; }
-.timeline-content p { font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.5; margin: 0; }
+.timeline-content h3 { font-family: 'Sour Gummy', sans-serif; font-size: 1.1rem; margin: 0 0 0.5rem 0; }
+.timeline-content p { font-family: 'Inter', sans-serif; font-size: 0.88rem; line-height: 1.45; margin: 0; }
 
 /* ======================================
    7. Outside-Tech & Footer

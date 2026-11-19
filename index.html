@@ -15,8 +15,8 @@
 
   <nav>
     <a href="#about">About</a> 
-    <a href="#projects">SWE</a>
     <a href="#research">Research</a>
+    <a href="#projects">SWE</a>
     <a href="#community">Community</a>
     <a href="#awards">Awards</a>
     <a href="#skills">Skills</a>
@@ -25,11 +25,12 @@
   <section id="about">
     <div class="about-left">
       <figure id="picLandy">
-        <img src="assets/aboutme.png" alt="Landy Rakotoarison">
+        <img src="assets/aboutme2.png" alt="Landy Rakotoarison">
         <figcaption>
-          <p>From Madagascar, studying at Lafayette College (US) as a full-ride international scholar</p>
+          <p> Hi! I'm a researcher exploring how machine learning and software engineering can help students learn more effectively.</p>
           <span class="material-icons graduation-icon">school</span>
-          <em>Computer Science, Class of 2026</em><br>
+          <em>Lafayette College, Bachelor's in Computer Science, Class of 2026</em><br>
+         
     
         </figcaption>
       </figure>
@@ -43,11 +44,69 @@
           <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn icon" width="40" height="40">
         </a>
       </div>
-      <div class="role-item">SOFTWARE ENGINEER</div>
       <div class="role-item">Generative AI / MACHINE LEARNING RESEARCHER</div>
+      <div class="role-item">SOFTWARE ENGINEER</div>
       <div class="role-item">COMMUNITY BUILDER</div>
     </div>
   </section>
+
+
+  <section id="research" class="reveal">
+  <div class="divider-line"></div>
+  <h2>ML/LLM Research</h2>
+
+  <div class="project-grid">
+
+     <div class="project-card" data-modal-target="thesis-modal">
+        <img src="assets/Thesis.png" alt="Senior Thesis" class="project-image">
+        <div class="project-info">
+    
+        <h3>Adaptive Learning in Game-Based Programming</h3>
+
+        <p>Investigating how ML and Small Language Models (SLMs) can provide personalized, offline-first Python mentorship.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">SLM Optimization</span><span class="tech-tag">VARK Modeling</span><span class="tech-tag">Game Telemetry</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-modal-target="poster-modal">
+        <img src="assets/amazon.png" alt="Symposium Poster" class="project-image">
+        <div class="project-info">
+        <h3>User Modeling Bias in LLMs</h3>
+        <a href="https://www.amazon.science/conferences-and-events/trusted-ai-symposium-2026"  target="_blank">Trusted AI Symposium 2026 </a>
+      
+        <p>Analyzing how LLMs inherit biases when modeling student profiles for adaptive education.</p>
+        <div class="tech-stack">
+          <span class="tech-tag">AI Ethics</span><span class="tech-tag">Inclusive Design</span><span class="tech-tag">HCI</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-modal-target="miningai-modal">
+        <img src="assets/coupe.jpg" alt="Award for the Mining.AI project" class="project-image">
+        <div class="project-info">
+          <h3>Machine Learning Research</h3>
+          <p>Hybrid ML and DL solution to predict clay mineral content from 55k+ spectral samples.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">PyTorch</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Research</span><span class="tech-tag">StreamLit</span>
+          </div>
+        </div>
+      </div>
+
+    <div class="project-card" data-modal-target="aiagents-modal">
+        <img src="assets/iEEE.png" alt="Award for the Mining.AI project" class="project-image">
+        <div class="project-info">
+          <h3>AI agents investigation </h3>
+         <p>Built a multi-agent simulation with LangGraph and Phaser to study AI agents' decision-making, cooperation, and greed in shared-resource environments.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Langgrpah</span><span class="tech-tag">Phaser</span><span class="tech-tag">Research</span><span class="tech-tag">StreamLit</span>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</section>
 
   <section id="projects" class="reveal">
       <h2>Software Engineering Experience</h2>
@@ -86,6 +145,17 @@
         </div>
       </div>
 
+      <div class="project-item" data-modal-target="asecna-modal">
+          <img src="assets/asecna.png" alt="ASECNA Project" class="project-image">
+          <div class="project-info">
+            <h3>Aviation Security Data Science</h3>
+            <p>Engineered Python pipelines to process flight telemetry data for safety analysis.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Plotly</span><span class="tech-tag">Folium</span>
+            </div>
+          </div>
+        </div>
+
         <div class="project-item" data-modal-target="haira-modal">
         <img src="assets/haira.png" alt="hAIra Project" class="project-image">
         <div class="project-info">
@@ -113,16 +183,7 @@
             </div>
           </div>
         </div>
-        <div class="project-item" data-modal-target="asecna-modal">
-          <img src="assets/asecna.png" alt="ASECNA Project" class="project-image">
-          <div class="project-info">
-            <h3>Aviation Data Science</h3>
-            <p>Engineered Python pipelines to process flight telemetry data for safety analysis.</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Plotly</span><span class="tech-tag">Folium</span>
-            </div>
-          </div>
-        </div>
+        
         <div class="project-item" data-modal-target="ta-modal">
           <img src="assets/lafayette.png" alt="Teaching Assistant" class="project-image">
           <div class="project-info">
@@ -138,61 +199,6 @@
       </div>
   </section>
 
-  <section id="research" class="reveal">
-  <div class="divider-line"></div>
-  <h2>ML/LLM Research</h2>
-
-  <div class="project-grid">
-    
-    <div class="project-card" data-modal-target="miningai-modal">
-        <img src="assets/coupe.jpg" alt="Award for the Mining.AI project" class="project-image">
-        <div class="project-info">
-          <h3>Machine Learning Research</h3>
-          <p>End-to-end hybrid ML and DL solution to predict clay mineral content from 55k+ spectral samples.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">PyTorch</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Research</span><span class="tech-tag">StreamLit</span>
-          </div>
-        </div>
-      </div>
-
-    <div class="project-card" data-modal-target="thesis-modal">
-        <img src="assets/Thesis.png" alt="Senior Thesis" class="project-image">
-        <div class="project-info">
-    
-        <h3>Adaptive Learning in Game-Based Programming</h3>
-
-        <p>Investigating how ML and Small Language Models (SLMs) can provide personalized, offline-first Python mentorship.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">SLM Optimization</span><span class="tech-tag">VARK Modeling</span><span class="tech-tag">Game Telemetry</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card" data-modal-target="poster-modal">
-        <img src="assets/amazon.png" alt="Symposium Poster" class="project-image">
-        <div class="project-info">
-        <h3>User Modeling Bias in LLMs</h3>
-        <a href="https://www.amazon.science/conferences-and-events/trusted-ai-symposium-2026"  target="_blank">Trusted Ai Symposium </a>
-      
-        <p>Analyzing how LLMs inherit biases when modeling student profiles for adaptive education.</p>
-        <div class="tech-stack">
-          <span class="tech-tag">AI Ethics</span><span class="tech-tag">Inclusive Design</span><span class="tech-tag">HCI</span>
-        </div>
-      </div>
-    </div>
-    <div class="project-card" data-modal-target="aiagents-modal">
-        <img src="assets/iEEE.png" alt="Award for the Mining.AI project" class="project-image">
-        <div class="project-info">
-          <h3>AI agents investigation </h3>
-         <p>Built a multi-agent simulation with LangGraph and Phaser to study AI agents' decision-making, cooperation, and greed in shared-resource environments.</p>
-          <div class="tech-stack">
-            <span class="tech-tag">Langgrpah</span><span class="tech-tag">Phaser</span><span class="tech-tag">Research</span><span class="tech-tag">StreamLit</span>
-          </div>
-        </div>
-      </div>
-  </div>
-
-</section>
 
   <section id="community" class="reveal full-width-section">
     <div class="section-header">
@@ -203,7 +209,7 @@
         <div class="community-card-creative" style="background-image: url('assets/landytalk.JPG');">
             <div class="card-overlay">
                 <h4>Public Speaking</h4>
-               <p>I both love and fear public speaking, and I've learned firsthand how sharing stories and experiences can inspire people. I believe how you present something matters as much as what you build. Highlights: UNICEF-selected <strong>TEDx Talk</strong>, TikTok grown to <strong>11k+</strong>, and <strong>3rd place</strong> at Lafayette's Big Idea Pitch Competition.</p>
+               <p>I both love and fear public speaking, and I've learned firsthand how sharing stories and experiences can inspire people. I believe how you present something matters as much as what you build. Highlights: UNICEF-selected <strong>TEDx Talk</strong>, TikTok grown to <strong>14k+</strong>, and <strong>3rd place</strong> at Lafayette's Big Idea Pitch Competition.</p>
 
                 
             </div>
@@ -218,7 +224,7 @@
         <div class="community-card-creative" style="background-image: url('assets/alsome.png');">
             <div class="card-overlay">
                 <h4>Hackathon Host</h4>
-                <p>I love bringing people together! I organized and co-hosted a "stupid hackathon" to help young engineers experience the joy of building. Over <strong>100 participants</strong> built silly and fun projects in less than 24 hours. These creations included an AI that roasts your friends' rizz and an over-engineered app to remind you to tie your shoelaces.</p>
+                <p>I love bringing people together! I organized and co-hosted  "stupid hackathon" to help young engineers experience the joy of building. Over <strong>100 participants</strong> built silly and fun projects in less than 24 hours. These creations included an AI that roasts your friends' rizz and an over-engineered app to remind you to tie your shoelaces.</p>
                
             </div>
         </div>
@@ -227,16 +233,16 @@
 
   <section id="awards" class="reveal">
     <div class="awards-header">
-        <h2>Awards & Recognition</h2>
+        <h2>Recent Awards & Recognition</h2>
         <p>Some <strong>hard work</strong> that has paid off...</p>
     </div>
     <div class="awards-timeline">
          <div class="awards-timeline">
         <div class="timeline-line"></div>
         <div class="timeline-items">
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2019</div><div class="timeline-content"><h3>Robotex Estonia</h3><p>Represented Madagascar as a national champion in an international robotics competition.</p></div></div>
             <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2021</div><div class="timeline-content"><h3>Top 50 Youngest Entrepreneurs in Africa</h3><p>Co-founded and led a startup to help transform trash into energy.</p></div></div>
             <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2022</div><div class="timeline-content"><h3>Awesomeness of '26</h3><p>Selected as a top five member of the class of 2026 from over 700+ students for academic excellence and leadership.</p></div></div>
+             <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2024</div><div class="timeline-content"><h3>Carolynn Van Dyke</h3><p>Sole CS recipient recognized for applying computing knowledge beyond the classroom</p></div></div>
             <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2025</div><div class="timeline-content"><h3>Pan-African Robotics</h3><p>Gold Medal 🥇 : Winning team in the AI League, competing against 2800+ students from 30+ countries.</p></div></div>
             <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2026</div><div class="timeline-content"><h3>I graduated!!</h3><p> Graduated Magna Cum Laude with honors in Computer Science, thankful for everything and looking forward to the next chapter very soon! </p></div></div>
         </div>
@@ -295,7 +301,7 @@
 
         <h4>Results</h4>
         <ul>
-          <li>Gett ing two IRB approved and run the experiment for 1,000+ sudents  onlien and 18 in person in Madagascar </li>
+          <li>Getting two IRB approved and run the experiment for 1,000+ sudents  onlien and 18 in person in Madagascar </li>
           <li>Defended my thesis! First author on paper : currently under review.</li>
         </ul>
       </div>
@@ -323,7 +329,7 @@
         <h4>Results</h4>
         <ul>
           <li>Proposed a set of inclusive AI design rubrics to help developers identify and mitigate bias in adaptive tutoring systems.</li>
-          <li>Research presented to an audience of AI safety and ethics experts at the Trusted AI Symposium.</li>
+          <li>Research presented at Amazon Trusted AI Symposium 2026 ( New York office) .</li>
         </ul>
       </div>
     </div>
@@ -435,7 +441,7 @@ That kind of overreliance can dull the very thing AI can't replace: <strong>crit
 
 <p>
 We wanted to change that.  
-That's why we built <strong>hAIra</strong> — a platform that helps humans think better, not less.  
+That's why we built hAIra.
 It's a space where AI collaboration encourages reflection, not dependency.
 </p>
 
@@ -473,17 +479,17 @@ It's a space where AI collaboration encourages reflection, not dependency.
         </div>
         <div class="modal-text-container">
           <p>
-            Working with Dr. Amy Ko to develop <strong>Wordplay</strong>, a programming language designed to be
-            accessible, usable, and expressive for everyone. My main focus  right now is integrating multilingual
-            support to improve accessibility, contributing across the frontend, backend, and database.
+            Working with Dr. Amy Ko to develop Wordplay, an open-source programming language designed to be accessible, usable, and expressive for everyone.
+            I contributed as a volunteer open-source developer, developing multilingual support to improve accessibility across the frontend, backend, and database.
           </p>
 
           <h4>The Challenge</h4>
-          <p>Most programming languages assume English literacy and able-bodied users, leaving out huge groups of learners. Wordplay set out to make coding welcoming to people of different languages and abilities.</p>
+          <p>Most programming languages assume English literacy and able-bodied users, leaving out huge groups of learners. 
+            Wordplay set out to make coding welcoming to people of different languages and abilities.</p>
 
           <h4>My Contribution</h4>
           <ul>
-            <li>Develop <strong>multilingual features support</strong> so the language ( recently chat) can be translated  to other language.</li>
+            <li>Develop <strong>multilingual features support</strong> so the chat dialogue can be translated  to other language.</li>
             <li>Contributed across the full stack — frontend, backend, and database — to ship accessibility-focused features.</li>
            
           </ul>
@@ -502,6 +508,6 @@ It's a space where AI collaboration encourages reflection, not dependency.
 </body>
 <footer>
   <p>&copy; 2026 Landy Rakotoarison. All rights reserved.</p>
-  <p>Made with ❤️ and Hot Chai </p>
+  <p>Made with ❤️  </p>
 </footer>
 </html>
